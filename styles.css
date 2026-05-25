@@ -2114,6 +2114,51 @@ h3, h4, h5 {
   transform: translateY(-2px);
 }
 
+/* ============ MEDIOS DE PAGO ============ */
+.pagos {
+  background: var(--white);
+  padding: 48px 0 40px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.pagos-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  text-align: center;
+  margin-bottom: 28px;
+}
+.pagos-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px 32px;
+}
+.pago-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  opacity: 0.75;
+  transition: opacity .25s;
+}
+.pago-item:hover { opacity: 1; }
+.pago-item svg { height: 28px; width: auto; display: block; }
+.pago-sep {
+  width: 1px;
+  height: 28px;
+  background: var(--border);
+}
+@media (max-width: 860px) {
+  .pagos { padding: 36px 0 32px; }
+  .pagos-track { gap: 18px 24px; }
+  .pago-item svg { height: 22px; }
+  .pago-sep { height: 22px; }
+}
+
 /* ============ CONTACTO ============ */
 .contacto {
   padding: 100px 0 90px;
