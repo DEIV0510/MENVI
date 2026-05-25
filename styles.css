@@ -1585,6 +1585,42 @@ h3, h4, h5 {
   letter-spacing: 0.4em;
 }
 
+/* ============ MISIÓN / VISIÓN ============ */
+.mision-vision {
+  background: var(--white);
+  padding: 90px 0;
+}
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+.mv-card {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.mv-line {
+  height: 1px;
+  background: var(--black);
+  width: 100%;
+}
+.mv-title {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 500;
+  color: var(--black);
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+.mv-text {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--gray-500);
+  line-height: 1.8;
+  margin: 0;
+}
+
 /* ============ PROPUESTA ============ */
 .propuesta {
   padding: 0;
@@ -2938,6 +2974,13 @@ section + section.divider-in::before {
   .svc-card-title { font-size: 22px; }
   .svc-card-text { font-size: 13px; margin-bottom: 16px; }
   .svc-card-num { font-size: 10px; margin-bottom: 12px; }
+
+  /* === MISIÓN / VISIÓN === */
+  .mv-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .mision-vision { padding: 60px 0; }
 
   /* === PROPUESTA SPLIT === */
   .propuesta-wrap {
