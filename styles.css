@@ -2353,7 +2353,7 @@ h3, h4, h5 {
   margin: 0 auto;
   padding: 0 48px 60px;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   gap: 48px;
 }
 .footer-col-brand {
