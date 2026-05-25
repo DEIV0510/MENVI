@@ -1,0 +1,5 @@
+# PDFs fuente (archivos originales, no necesarios en el repo)
+*.pdf
+
+# Carpeta de imágenes antiguas (reemplazada por imgs2/)
+imgs/
