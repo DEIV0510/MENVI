@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Filtros para Lentes · MENVI Eyewear</title>
+<meta name="description" content="Conoce los filtros para lentes que ofrece MENVI Eyewear: fotosensible, transitions, azul, rojo, amarillo y naranja. Encuentra el que mejor se adapta a tu estilo de vida." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Montserrat:wght@200;300;400;500;600;700&family=Questrial&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="LOGO.png" />
+<link rel="apple-touch-icon" href="LOGO.png" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .fl-page { padding-top: 120px; }
+
+  /* HERO */
+  .fl-hero {
+    text-align: center;
+    padding: 60px 24px 56px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .fl-hero .kicker { display: inline-block; margin-bottom: 14px; }
+  .fl-hero h1 {
+    font-family: 'Bodoni Moda', 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 6vw, 3.6rem);
+    line-height: 1.1;
+    margin: 0 0 20px;
+  }
+  .fl-hero p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: 1.75;
+    color: #555;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  /* GRID */
+  .fl-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid #e5e5e5;
+  }
+  .fl-card {
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    transition: box-shadow .3s;
+  }
+  .fl-card:nth-child(3n) { border-right: none; }
+  .fl-card:hover { box-shadow: 0 8px 40px rgba(0,0,0,.08); z-index: 1; position: relative; }
+
+  .fl-card-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+  .fl-card-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .5s cubic-bezier(.2,.6,.2,1);
+  }
+  .fl-card:hover .fl-card-img img { transform: scale(1.04); }
+
+  .fl-card-body {
+    padding: 32px 28px 40px;
+  }
+  .fl-card-color {
+    display: inline-block;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    margin-bottom: 14px;
+    vertical-align: middle;
+  }
+  .fl-card-title {
+    font-family: 'Bodoni Moda', 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    font-weight: 500;
+    margin: 0 0 16px;
+    line-height: 1.2;
+  }
+  .fl-card-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #555;
+    line-height: 1.8;
+    margin: 0 0 20px;
+  }
+  .fl-card-text p { margin: 0 0 12px; }
+  .fl-card-text p:last-child { margin: 0; }
+  .fl-card-tag {
+    display: inline-block;
+    padding: 5px 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    opacity: .7;
+  }
+
+  /* CTA */
+  .fl-cta {
+    text-align: center;
+    padding: 72px 24px 80px;
+    border-top: 1px solid #e5e5e5;
+    background: #fafafa;
+  }
+  .fl-cta h2 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    font-weight: 500;
+    margin: 0 0 16px;
+  }
+  .fl-cta p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #555;
+    margin: 0 0 32px;
+    font-size: 15px;
+  }
+  .fl-back-wrap { text-align: center; padding: 0 24px 64px; }
+  .fl-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .85rem; letter-spacing: .12em; text-transform: uppercase;
+    text-decoration: none; color: inherit;
+    transition: background .25s, color .25s;
+  }
+  .fl-back:hover { background: #111; color: #fff; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .fl-grid { grid-template-columns: repeat(2, 1fr); }
+    .fl-card:nth-child(3n) { border-right: 1px solid #e5e5e5; }
+    .fl-card:nth-child(2n) { border-right: none; }
+    .fl-card-body { padding: 24px 20px 32px; }
+  }
+  @media (max-width: 560px) {
+    .fl-page { padding-top: 90px; }
+    .fl-grid { grid-template-columns: 1fr; }
+    .fl-card { border-right: none; }
+    .fl-card:nth-child(2n) { border-right: none; }
+    .fl-card-body { padding: 20px 18px 28px; }
+    .fl-hero { padding: 40px 20px 40px; }
+  }
+</style>
+</head>
+<body class="fl-page">
+
+<!-- NAV -->
+<nav class="nav scrolled" id="nav">
+  <div class="nav-inner">
+    <a href="index.html#top" class="logo">
+      <img src="LOGO.png" alt="MENVI Eyewear" class="logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+      <li><a href="index.html#servicios">Servicios</a></li>
+      <li><a href="index.html#productos">Productos</a></li>
+      <li><a href="filtros.html" aria-current="page">Filtros</a></li>
+      <li><a href="index.html#galeria">Estilo</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+    <a href="index.html#contacto" class="nav-cta">Agendar cita</a>
+    <button class="nav-burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="fl-hero">
+  <span class="kicker">Filtros para lentes</span>
+  <h1>Ver bien en cada momento del día</h1>
+  <p>En MENVI creemos que ver bien también significa sentirse cómodo en cada momento del día. Cada filtro está diseñado para proteger, mejorar y adaptar tu visión a las condiciones del entorno.</p>
+</header>
+
+<!-- GRID DE FILTROS -->
+<div class="fl-grid">
+
+  <!-- FOTOSENSIBLE -->
+  <div class="fl-card">
+    <div class="fl-card-img">
+      <img src="imgs2/fil-08.jpg" alt="Lentes fotosensibles" loading="lazy" />
+    </div>
+    <div class="fl-card-body">
+      <span class="fl-card-color" style="background:#9E9E9E;"></span>
+      <h2 class="fl-card-title">Fotosensible</h2>
+      <div class="fl-card-text">
+        <p>El filtro fotosensible adapta tus lentes automáticamente según la intensidad de la luz. En interiores permanecen claros y, al exponerse al sol, se oscurecen para brindar mayor comodidad y protección visual frente a los rayos UV.</p>
+        <p>Es la opción ideal para quienes buscan practicidad, confort y protección en un solo lente, sin necesidad de cambiar entre gafas formuladas y gafas de sol.</p>
+      </div>
+      <span class="fl-card-tag" style="color:#555;">Adaptable · UV</span>
+    </div>
+  </div>
+
+  <!-- TRANSITIONS -->
+  <div class="fl-card">
+    <div class="fl-card-img">
+      <img src="imgs2/fil-10.jpg" alt="Lentes Transitions" loading="lazy" />
+    </div>
+    <div class="fl-card-body">
+      <span class="fl-card-color" style="background: linear-gradient(135deg,#a78bfa,#60a5fa);"></span>
+      <h2 class="fl-card-title">Transitions<sup style="font-size:.6em;">®</sup></h2>
+      <div class="fl-card-text">
+        <p>Los lentes Transitions® se adaptan inteligentemente a los cambios de luz, oscureciéndose al contacto con el sol y volviendo a su estado claro en interiores. Ofrecen protección contra los rayos UV, mayor confort visual y una experiencia más cómoda durante todo el día.</p>
+        <p>Además de cuidar tu visión, ayudan a reducir el deslumbramiento y la fatiga visual, combinando tecnología, estilo y practicidad en un solo lente.</p>
+      </div>
+      <span class="fl-card-tag" style="color:#7c3aed;">Tecnología · UV · Confort</span>
+    </div>
+  </div>
+
+  <!-- FILTRO AZUL -->
+  <div class="fl-card">
+    <div class="fl-card-img">
+      <img src="imgs2/fil-09.jpg" alt="Filtro azul para pantallas" loading="lazy" />
+    </div>
+    <div class="fl-card-body">
+      <span class="fl-card-color" style="background:#3b82f6;"></span>
+      <h2 class="fl-card-title">Filtro Azul</h2>
+      <div class="fl-card-text">
+        <p>Diseñado para ayudar a proteger tus ojos de la exposición prolongada a la luz emitida por pantallas digitales como celulares, computadores y televisores. Contribuye a reducir el cansancio visual, la fatiga ocular y la sensación de ojos secos después de largas jornadas frente a dispositivos.</p>
+        <p>Ideal para quienes trabajan, estudian o pasan varias horas frente a pantallas.</p>
+      </div>
+      <span class="fl-card-tag" style="color:#2563eb;">Pantallas · Descanso visual</span>
+    </div>
+  </div>
+
+  <!-- FILTRO ROJO -->
+  <div class="fl-card">
+    <div class="fl-card-img">
+      <img src="imgs2/fil-01.jpg" alt="Filtro rojo para lentes" loading="lazy" />
+    </div>
+    <div class="fl-card-body">
+      <span class="fl-card-color" style="background:#ef4444;"></span>
+      <h2 class="fl-card-title">Filtro Rojo</h2>
+      <div class="fl-card-text">
+        <p>Diseñado para mejorar el contraste y la percepción visual en determinadas condiciones de luz. Se usa principalmente en ambientes nocturnos o con poca luz, mejorando el contraste en condiciones oscuras — uso militar, aviación, deportes y pantallas antes de dormir.</p>
+        <p>Ayuda a que los ojos se adapten más rápido al cambio de luz y puede proteger la producción de melatonina al bloquear por completo la luz azul. Una excelente opción para quienes buscan combinar protección, confort visual y personalidad.</p>
+      </div>
+      <span class="fl-card-tag" style="color:#dc2626;">Nocturno · Contraste · Melatonina</span>
+    </div>
+  </div>
+
+  <!-- FILTRO AMARILLO -->
+  <div class="fl-card">
+    <div class="fl-card-img">
+      <img src="imgs2/fil-07.jpg" alt="Filtro amarillo para lentes" loading="lazy" />
+    </div>
+    <div class="fl-card-body">
+      <span class="fl-card-color" style="background:#eab308;"></span>
+      <h2 class="fl-card-title">Filtro Amarillo</h2>
+      <div class="fl-card-text">
+        <p>Ayuda a mejorar el contraste y la claridad visual, especialmente en ambientes con poca iluminación, neblina o durante la conducción nocturna. Reduce el deslumbramiento causado por luces intensas y brinda una visión más cómoda y descansada.</p>
+        <p>Mejoran la percepción de profundidad y hacen que los objetos se vean más definidos y nítidos al filtrar parte de la luz azul difusa. Actualmente se recomiendan para conducir.</p>
+      </div>
+      <span class="fl-card-tag" style="color:#ca8a04;">Conducción · Contraste · Claridad</span>
+    </div>
+  </div>
+
+  <!-- FILTRO NARANJA -->
+  <div class="fl-card">
+    <div class="fl-card-img">
+      <img src="imgs2/fil-02.jpg" alt="Filtro naranja para lentes" loading="lazy" />
+    </div>
+    <div class="fl-card-body">
+      <span class="fl-card-color" style="background:#f97316;"></span>
+      <h2 class="fl-card-title">Filtro Naranja</h2>
+      <div class="fl-card-text">
+        <p>El punto medio perfecto entre los filtros amarillos y rojos: equilibran protección visual, comodidad y uso diario. Protegen tus ojos de las pantallas al bloquear gran parte de la luz azul, reducen la fatiga visual, sequedad y cansancio ocular.</p>
+        <p>Además ayudan a que el cuerpo produzca melatonina cuidando tu sueño. Una excelente opción para quienes buscan un estilo moderno y diferente, o para resaltar durante algún evento.</p>
+      </div>
+      <span class="fl-card-tag" style="color:#ea580c;">Pantallas · Sueño · Estilo</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<div class="fl-cta">
+  <h2>¿Cuál filtro es el ideal para ti?</h2>
+  <p>Nuestros especialistas te asesoran sin costo en tu próxima visita.</p>
+  <a href="https://wa.me/573024628165?text=Hola%20MENVI%2C%20quiero%20asesor%C3%ADa%20sobre%20los%20filtros%20para%20lentes" class="btn btn-dark" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+</div>
+
+<div class="fl-back-wrap">
+  <a href="index.html" class="fl-back">← Volver al inicio</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col footer-col-brand">
+      <a href="index.html#top" class="logo logo-footer">
+        <img src="LOGO.png" alt="MENVI Eyewear" class="logo-img logo-img-footer" />
+      </a>
+      <p class="footer-tag"><em>Transformamos tu forma de ver el mundo.</em></p>
+    </div>
+    <div class="footer-col">
+      <h5>Productos</h5>
+      <a href="index.html#productos">Monturas</a>
+      <a href="index.html#productos">Gafas de Sol</a>
+      <a href="index.html#productos">Lentes de Contacto</a>
+      <a href="index.html#servicios">Examen Visual</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contacto</h5>
+      <a href="mailto:opticasmenvi@hotmail.com">opticasmenvi@hotmail.com</a>
+      <a href="index.html#contacto">Agendar cita</a>
+    </div>
+    <div class="footer-col">
+      <h5>Síguenos</h5>
+      <div class="social">
+        <a href="https://www.instagram.com/menvieyewear/" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+        <a href="https://www.facebook.com/menvieyewear" aria-label="Facebook" target="_blank" rel="noopener">FB</a>
+        <a href="https://www.tiktok.com/@menvieyewear" aria-label="TikTok" target="_blank" rel="noopener">TT</a>
+      </div>
+      <a href="https://www.instagram.com/menvieyewear/" class="footer-handle" target="_blank" rel="noopener">@menvieyewear</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 MENVI Eyewear · Todos los derechos reservados.</span>
+    <span>Transformamos tu forma de ver el mundo</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/573024628165?text=Hola%20MENVI%2C%20quiero%20agendar%20un%20examen%20visual" class="wa-float" aria-label="WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.4 8.6 3.4 15.6c0 2.3.6 4.5 1.7 6.4L3 29l7.2-2c1.8 1 3.8 1.5 5.8 1.5h.1c7 0 12.6-5.6 12.6-12.6S23 3 16 3zm0 22.9c-1.7 0-3.4-.4-4.8-1.3l-.3-.2-3.6 1 1-3.5-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 9.7-10 9.7zm5.5-7.2c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0c-1.8-.9-3-1.6-4.2-3.6-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1.1 1.1-1.1 2.6 1.1 3 1.3 3.2 2.2 3.4 5.4 4.7c.7.3 1.3.5 1.8.7.8.2 1.5.2 2 .1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+  <span class="wa-float-pulse"></span>
+  <span class="wa-float-tooltip">Consultar por WhatsApp</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
