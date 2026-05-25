@@ -362,7 +362,7 @@ h3, h4, h5 {
   transition: filter .35s;
 }
 .nav.scrolled .logo-img {
-  filter: none;
+  filter: brightness(0);
 }
 /* Nav CTA inverts too */
 .nav .nav-cta {
@@ -2762,9 +2762,9 @@ section + section.divider-in::before {
   /* === NAVBAR === */
   .nav {
     top: 32px;
-    padding: 3px 0;
+    padding: 5px 0;
   }
-  .nav.scrolled { padding: 3px 0; }
+  .nav.scrolled { padding: 5px 0; }
   .nav-inner {
     padding: 0 18px;
     gap: 12px;
