@@ -326,10 +326,8 @@ h3, h4, h5 {
   position: fixed; top: 42px; left: 0; right: 0; z-index: 100;
   padding: 8px 0;
   transition: top .35s, background .35s, padding .35s, border-color .35s, backdrop-filter .35s;
-  border-bottom: 1px solid rgba(255,255,255,.08);
-  background: rgba(10,10,10,.35);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent;
+  background: transparent;
 }
 .nav.scrolled {
   top: 0;
