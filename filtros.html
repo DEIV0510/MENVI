@@ -57,10 +57,14 @@
 
   .fl-card-img {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    position: relative;
+    padding-bottom: 100%; /* cuadrado 1:1 garantizado */
+    height: 0;
     overflow: hidden;
   }
   .fl-card-img img {
+    position: absolute;
+    top: 0; left: 0;
     width: 100%; height: 100%;
     object-fit: cover;
     transition: transform .5s cubic-bezier(.2,.6,.2,1);
