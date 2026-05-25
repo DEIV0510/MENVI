@@ -514,27 +514,27 @@
         </div>
       </div>
 
-      <form class="contacto-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Solicitud enviada ✓'; this.reset();">
+      <form class="contacto-form" id="citaForm" onsubmit="enviarCitaWA(event)">
         <h3>Solicita tu cita</h3>
         <div class="field">
-          <input type="text" required placeholder=" " />
+          <input type="text" name="nombre" required placeholder=" " />
           <label>Nombre completo</label>
         </div>
         <div class="field-row">
           <div class="field">
-            <input type="tel" required placeholder=" " />
+            <input type="tel" name="telefono" required placeholder=" " />
             <label>Teléfono</label>
           </div>
           <div class="field">
-            <input type="email" required placeholder=" " />
+            <input type="email" name="correo" required placeholder=" " />
             <label>Correo</label>
           </div>
         </div>
         <div class="field">
-          <select required>
+          <select name="servicio" required>
             <option value="">Selecciona un servicio</option>
             <option>Examen visual</option>
-            <option>Monturas oftálmicas</option>
+            <option>Monturas</option>
             <option>Gafas de sol</option>
             <option>Lentes de contacto</option>
             <option>Otra consulta</option>
@@ -542,10 +542,10 @@
           <label class="floating">Servicio de interés</label>
         </div>
         <div class="field">
-          <textarea rows="4" placeholder=" "></textarea>
+          <textarea name="mensaje" rows="4" placeholder=" "></textarea>
           <label>Cuéntanos brevemente lo que necesitas</label>
         </div>
-        <button type="submit" class="btn btn-dark btn-full">Enviar solicitud</button>
+        <button type="submit" class="btn btn-dark btn-full">Enviar por WhatsApp</button>
       </form>
     </div>
   </div>

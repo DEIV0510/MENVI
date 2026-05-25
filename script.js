@@ -240,3 +240,26 @@
   });
 
 })();
+
+/* ============ FORMULARIO → WHATSAPP ============ */
+function enviarCitaWA(e) {
+  e.preventDefault();
+  const f = e.target;
+  const nombre   = f.nombre.value.trim();
+  const telefono = f.telefono.value.trim();
+  const correo   = f.correo.value.trim();
+  const servicio = f.servicio.value;
+  const mensaje  = f.mensaje.value.trim();
+
+  const texto =
+    `Hola MENVI, quiero solicitar una cita 👓\n\n` +
+    `👤 Nombre: ${nombre}\n` +
+    `📱 Teléfono: ${telefono}\n` +
+    `📧 Correo: ${correo}\n` +
+    `🔍 Servicio: ${servicio}\n` +
+    (mensaje ? `💬 Mensaje: ${mensaje}` : '');
+
+  const url = `https://wa.me/573024628165?text=${encodeURIComponent(texto)}`;
+  window.open(url, '_blank');
+  f.reset();
+}
