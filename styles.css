@@ -2811,8 +2811,8 @@ section + section.divider-in::before {
   .nav .logo-img {
     aspect-ratio: auto;
     object-fit: contain;
-    width: 96px;
-    height: 38px;
+    width: 120px;
+    height: 48px;
   }
 
   /* === HERO === */
@@ -3123,7 +3123,7 @@ section + section.divider-in::before {
   .mobile-cta { padding: 10px; gap: 8px; }
   .wa-float { bottom: 76px; width: 46px; height: 46px; }
   .wa-float svg { width: 24px; height: 24px; }
-  .nav .logo-img { width: 84px; height: 34px; }
+  .nav .logo-img { width: 108px; height: 43px; }
   .nav-cta {
     padding: 6px 10px;
     font-size: 8px;
