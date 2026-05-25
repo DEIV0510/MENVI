@@ -2795,19 +2795,11 @@ section + section.divider-in::before {
   .nav-burger { display: flex; }
   .nav-burger span { background: var(--white); }
   .nav.scrolled .nav-burger span { background: var(--black); }
-  /* Compact AGENDAR CITA button on mobile — grouped with burger on the right */
-  .nav-cta {
-    padding: 7px 12px;
-    font-size: 8.5px;
-    letter-spacing: 0.12em;
-    gap: 4px;
-    margin-left: auto;
-    margin-right: 10px;
-    flex-shrink: 0;
-  }
+  /* Ocultar CTA del nav en móvil — la barra sticky inferior lo cubre */
+  .nav-cta { display: none; }
   .nav-inner {
-    justify-content: flex-start;
-    gap: 8px;
+    justify-content: space-between;
+    gap: 0;
   }
   /* Logo in navbar — full image visible (no aggressive crop) */
   .nav .logo-img {
