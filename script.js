@@ -44,7 +44,7 @@
     const y = window.scrollY;
     if (nav) {
       // Pages without a hero (inner pages) always stay in scrolled state
-      if (nav.dataset.navFixed) { nav.classList.add('scrolled'); return; }
+      if (nav.hasAttribute('data-nav-fixed')) { nav.classList.add('scrolled'); return; }
       if (y > 40) nav.classList.add('scrolled');
       else nav.classList.remove('scrolled');
     }
