@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gafas de Sol · MENVI Eyewear</title>
+<meta name="description" content="Catálogo de gafas de sol MENVI Eyewear: Nike, Adidas y Monastery. Filtro UV400, diseños deportivos y de autor para hombre y mujer." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Montserrat:wght@200;300;400;500;600;700&family=Questrial&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="LOGO.png" />
+<link rel="apple-touch-icon" href="LOGO.png" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .gs-page { padding-top: 120px; }
+
+  /* HERO */
+  .gs-hero {
+    text-align: center;
+    padding: 60px 24px 48px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .gs-hero .kicker { display: inline-block; margin-bottom: 14px; }
+  .gs-hero h1 {
+    font-family: 'Bodoni Moda', 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 6vw, 3.6rem);
+    line-height: 1.1;
+    margin: 0 0 20px;
+  }
+  .gs-hero p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: 1.75;
+    color: #555;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  /* GRID */
+  .gs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px 70px;
+  }
+  .gs-card {
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: box-shadow .35s, transform .35s;
+    background: #fff;
+  }
+  .gs-card:hover {
+    box-shadow: 0 12px 44px rgba(0,0,0,.09);
+    transform: translateY(-3px);
+  }
+  .gs-card-img {
+    width: 100%;
+    position: relative;
+    padding-bottom: 78%;
+    height: 0;
+    overflow: hidden;
+    background: #fafafa;
+  }
+  .gs-card-img img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .5s cubic-bezier(.2,.6,.2,1);
+  }
+  .gs-card:hover .gs-card-img img { transform: scale(1.05); }
+  .gs-card-brand {
+    position: absolute;
+    top: 14px; left: 14px;
+    padding: 5px 12px;
+    background: rgba(255,255,255,.92);
+    border-radius: 999px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #111;
+  }
+  .gs-card-body { padding: 24px 26px 28px; }
+  .gs-card-line {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .gs-card-title {
+    font-family: 'Bodoni Moda', 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0 0 10px;
+    line-height: 1.2;
+  }
+  .gs-card-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: #666;
+    line-height: 1.6;
+    margin: 0 0 18px;
+  }
+  .gs-card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #111;
+    text-decoration: none;
+    border-bottom: 1px solid #111;
+    padding-bottom: 2px;
+    transition: opacity .25s;
+  }
+  .gs-card-cta:hover { opacity: .6; }
+
+  /* CTA */
+  .gs-cta {
+    text-align: center;
+    padding: 72px 24px 80px;
+    border-top: 1px solid #e5e5e5;
+    background: #fafafa;
+  }
+  .gs-cta h2 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    font-weight: 500;
+    margin: 0 0 16px;
+  }
+  .gs-cta p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #555;
+    margin: 0 0 32px;
+    font-size: 15px;
+  }
+  .gs-back-wrap { text-align: center; padding: 0 24px 64px; }
+  .gs-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .85rem; letter-spacing: .12em; text-transform: uppercase;
+    text-decoration: none; color: inherit;
+    transition: background .25s, color .25s;
+  }
+  .gs-back:hover { background: #111; color: #fff; }
+
+  /* RESPONSIVE */
+  @media (max-width: 1000px) {
+    .gs-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; padding: 0 24px 56px; }
+  }
+  @media (max-width: 640px) {
+    .gs-page { padding-top: 90px; }
+    .gs-hero { padding: 40px 20px 32px; }
+    .gs-grid { grid-template-columns: 1fr; gap: 18px; padding: 0 18px 48px; }
+    .gs-card-body { padding: 20px 20px 24px; }
+  }
+</style>
+</head>
+<body class="gs-page">
+
+<!-- NAV -->
+<nav class="nav scrolled" id="nav" data-nav-fixed>
+  <div class="nav-inner">
+    <a href="index.html#top" class="logo">
+      <img src="LOGO.png" alt="MENVI Eyewear" class="logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+      <li><a href="index.html#servicios">Servicios</a></li>
+      <li><a href="index.html#productos">Productos</a></li>
+      <li><a href="filtros.html">Filtros</a></li>
+      <li><a href="index.html#galeria">Estilo</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+    <a href="index.html#contacto" class="nav-cta">Agendar cita</a>
+    <button class="nav-burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="gs-hero">
+  <span class="kicker">Gafas de Sol</span>
+  <h1>Protección UV400 con actitud</h1>
+  <p>Una selección deportiva y de autor: Nike, Adidas y Monastery. Cada modelo combina filtro UV400, materiales resistentes y un diseño que hace parte de tu estilo.</p>
+</header>
+
+<!-- GRID -->
+<div class="gs-grid">
+
+  <!-- 1 -->
+  <div class="gs-card">
+    <div class="gs-card-img">
+      <span class="gs-card-brand">Nike</span>
+      <img src="imgs2/gafas-nike-field.jpg" alt="Nike Field, gafas deportivas gris con lente espejado" loading="lazy" />
+    </div>
+    <div class="gs-card-body">
+      <div class="gs-card-line">Nike Field</div>
+      <h3 class="gs-card-title">Armazón gris translúcido</h3>
+      <p class="gs-card-text">Detalles en naranja y verde lima, lente espejado degradé morado-rojo. Diseño envolvente ideal para running y ciclismo.</p>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20las%20gafas%20Nike%20Field" class="gs-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="gs-card">
+    <div class="gs-card-img">
+      <span class="gs-card-brand">Nike</span>
+      <img src="imgs2/gafas-nike-road-durazno.jpg" alt="Nike Road, gafas deportivas durazno con lente morado" loading="lazy" />
+    </div>
+    <div class="gs-card-body">
+      <div class="gs-card-line">Nike Road</div>
+      <h3 class="gs-card-title">Armazón durazno translúcido</h3>
+      <p class="gs-card-text">Ceja en rojo con detalle azul, lente espejado morado. Estilo shield de una sola pieza, liviano y aerodinámico.</p>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20las%20gafas%20Nike%20Road%20durazno" class="gs-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="gs-card">
+    <div class="gs-card-img">
+      <span class="gs-card-brand">Nike</span>
+      <img src="imgs2/gafas-nike-road-naranja.jpg" alt="Nike Road, gafas deportivas naranja con lente morado" loading="lazy" />
+    </div>
+    <div class="gs-card-body">
+      <div class="gs-card-line">Nike Road</div>
+      <h3 class="gs-card-title">Armazón naranja translúcido</h3>
+      <p class="gs-card-text">Ceja en rojo con puntas en fucsia, lente espejado lila. La versión de mayor contraste de la línea Road.</p>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20las%20gafas%20Nike%20Road%20naranja" class="gs-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="gs-card">
+    <div class="gs-card-img">
+      <span class="gs-card-brand">Nike</span>
+      <img src="imgs2/gafas-nike-max.jpg" alt="Nike Max, gafas negras estilo aviador" loading="lazy" />
+    </div>
+    <div class="gs-card-body">
+      <div class="gs-card-line">Nike Max</div>
+      <h3 class="gs-card-title">Armazón negro mate</h3>
+      <p class="gs-card-text">Silueta tipo aviador con lente fotosensible que se adapta a la luz. Un modelo versátil para uso diario y deportivo.</p>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20las%20gafas%20Nike%20Max" class="gs-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="gs-card">
+    <div class="gs-card-img">
+      <span class="gs-card-brand">Nike</span>
+      <img src="imgs2/gafas-nike-sport-negro.jpg" alt="Nike, gafas deportivas negras con lente verde oscuro" loading="lazy" />
+    </div>
+    <div class="gs-card-body">
+      <div class="gs-card-line">Nike Sport</div>
+      <h3 class="gs-card-title">Armazón negro con detalle gris</h3>
+      <p class="gs-card-text">Diseño angular envolvente con lente verde oscuro polarizado. Pensado para máximo rendimiento deportivo.</p>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20las%20gafas%20Nike%20Sport%20negras" class="gs-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="gs-card">
+    <div class="gs-card-img">
+      <span class="gs-card-brand">Nike ACG</span>
+      <img src="imgs2/gafas-nike-acg-caqui.jpg" alt="Nike ACG, gafas caqui All Conditions Gear" loading="lazy" />
+    </div>
+    <div class="gs-card-body">
+      <div class="gs-card-line">Nike ACG · All Conditions Gear</div>
+      <h3 class="gs-card-title">Armazón caqui mate</h3>
+      <p class="gs-card-text">Lente Max Optics gris ahumado en un diseño sin marco inferior. De la línea outdoor de Nike, resistente y ligera.</p>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20las%20gafas%20Nike%20ACG%20caqui" class="gs-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="gs-card">
+    <div class="gs-card-img">
+      <span class="gs-card-brand">Nike</span>
+      <img src="imgs2/gafas-nike-maxoptics-pro.jpg" alt="Nike Max Optics Pro, gafas negras con lente verde-azul" loading="lazy" />
+    </div>
+    <div class="gs-card-body">
+      <div class="gs-card-line">Nike Max Optics Pro</div>
+      <h3 class="gs-card-title">Armazón negro, verde y azul</h3>
+      <p class="gs-card-text">Lente espejado verde-azul de alto rendimiento óptico. Diseño de competencia con acentos de color vibrantes.</p>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20las%20gafas%20Nike%20Max%20Optics%20Pro" class="gs-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="gs-card">
+    <div class="gs-card-img">
+      <span class="gs-card-brand">Adidas</span>
+      <img src="imgs2/gafas-adidas-blanco-azul.jpg" alt="Adidas, gafas blancas y azules con lente espejado" loading="lazy" />
+    </div>
+    <div class="gs-card-body">
+      <div class="gs-card-line">Adidas Sport</div>
+      <h3 class="gs-card-title">Armazón blanco y azul</h3>
+      <p class="gs-card-text">Silueta shield con lente espejado azul. Combinación clásica del deporte con un acabado brillante.</p>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20las%20gafas%20Adidas%20blanco%20y%20azul" class="gs-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="gs-card">
+    <div class="gs-card-img">
+      <span class="gs-card-brand">Adidas</span>
+      <img src="imgs2/gafas-adidas-negro-champan.jpg" alt="Adidas, gafas negras con lente champán" loading="lazy" />
+    </div>
+    <div class="gs-card-body">
+      <div class="gs-card-line">Adidas Sport</div>
+      <h3 class="gs-card-title">Armazón negro mate</h3>
+      <p class="gs-card-text">Lente espejado tono champán con acentos dorados. Un modelo elegante para uso urbano y deportivo.</p>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20las%20gafas%20Adidas%20negro%20y%20champ%C3%A1n" class="gs-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="gs-card">
+    <div class="gs-card-img">
+      <span class="gs-card-brand">Adidas</span>
+      <img src="imgs2/gafas-adidas-negro-rojo.jpg" alt="Adidas, gafas negras con lente espejado rojo" loading="lazy" />
+    </div>
+    <div class="gs-card-body">
+      <div class="gs-card-line">Adidas Sport</div>
+      <h3 class="gs-card-title">Armazón negro brillante</h3>
+      <p class="gs-card-text">Lente espejado rojo-naranja de alto impacto visual. Ideal para quienes buscan un estilo audaz.</p>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20las%20gafas%20Adidas%20negro%20y%20rojo" class="gs-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+
+  <!-- 11 -->
+  <div class="gs-card">
+    <div class="gs-card-img">
+      <span class="gs-card-brand">Adidas</span>
+      <img src="imgs2/gafas-adidas-cafe-iridiscente.jpg" alt="Adidas, gafas cafe iridiscente con lente dorado" loading="lazy" />
+    </div>
+    <div class="gs-card-body">
+      <div class="gs-card-line">Adidas Sport</div>
+      <h3 class="gs-card-title">Armazón café iridiscente</h3>
+      <p class="gs-card-text">Acabado translúcido con reflejos morados y lente espejado dorado. Puntas en negro mate para mayor sujeción.</p>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20las%20gafas%20Adidas%20caf%C3%A9%20iridiscente" class="gs-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+
+  <!-- 12 -->
+  <div class="gs-card">
+    <div class="gs-card-img">
+      <span class="gs-card-brand">Adidas Originals</span>
+      <img src="imgs2/gafas-adidas-transparente-gris.jpg" alt="Adidas Originals, gafas transparentes con lente morado" loading="lazy" />
+    </div>
+    <div class="gs-card-body">
+      <div class="gs-card-line">Adidas Originals</div>
+      <h3 class="gs-card-title">Armazón transparente</h3>
+      <p class="gs-card-text">Montura cuadrada estilo urbano con lente morado ahumado. Un básico versátil de la línea casual.</p>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20las%20gafas%20Adidas%20Originals%20transparentes" class="gs-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+
+  <!-- 13 -->
+  <div class="gs-card">
+    <div class="gs-card-img">
+      <span class="gs-card-brand">Adidas Originals</span>
+      <img src="imgs2/gafas-adidas-rojo.jpg" alt="Adidas Originals, gafas rojas cuadradas" loading="lazy" />
+    </div>
+    <div class="gs-card-body">
+      <div class="gs-card-line">Adidas Originals</div>
+      <h3 class="gs-card-title">Armazón rojo sólido</h3>
+      <p class="gs-card-text">Montura cuadrada de acetato brillante con lente gris oscuro. Un color statement para destacar.</p>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20las%20gafas%20Adidas%20Originals%20rojas" class="gs-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+
+  <!-- 14 -->
+  <div class="gs-card">
+    <div class="gs-card-img">
+      <span class="gs-card-brand">Adidas Originals</span>
+      <img src="imgs2/gafas-adidas-celeste.jpg" alt="Adidas Originals, gafas celestes estilo cat-eye" loading="lazy" />
+    </div>
+    <div class="gs-card-body">
+      <div class="gs-card-line">Adidas Originals</div>
+      <h3 class="gs-card-title">Armazón celeste cat-eye</h3>
+      <p class="gs-card-text">Silueta felina en acetato brillante con lente degradé azul y rosa. Un diseño femenino y contemporáneo.</p>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20las%20gafas%20Adidas%20Originals%20celestes" class="gs-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+
+  <!-- 15 -->
+  <div class="gs-card">
+    <div class="gs-card-img">
+      <span class="gs-card-brand">Adidas Originals</span>
+      <img src="imgs2/gafas-adidas-negro-catseye.jpg" alt="Adidas Originals, gafas negras estilo cat-eye" loading="lazy" />
+    </div>
+    <div class="gs-card-body">
+      <div class="gs-card-line">Adidas Originals</div>
+      <h3 class="gs-card-title">Armazón negro cat-eye</h3>
+      <p class="gs-card-text">La misma silueta felina en un negro brillante atemporal, con lente gris oscuro y logo grabado.</p>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20las%20gafas%20Adidas%20Originals%20negras" class="gs-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+
+  <!-- 16 -->
+  <div class="gs-card">
+    <div class="gs-card-img">
+      <span class="gs-card-brand">Monastery</span>
+      <img src="imgs2/gafas-monastery-plata.jpg" alt="Monastery, gafas sin marco con detalles en plata" loading="lazy" />
+    </div>
+    <div class="gs-card-body">
+      <div class="gs-card-line">Monastery</div>
+      <h3 class="gs-card-title">Sin marco, detalles en plata</h3>
+      <p class="gs-card-text">Diseño minimalista sin montura con bisagras en metal plateado y lente gris oscuro. Una pieza de autor y bajo perfil.</p>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20las%20gafas%20Monastery" class="gs-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<div class="gs-cta">
+  <h2>Encuentra tus gafas ideales</h2>
+  <p>Todos nuestros modelos cuentan con protección UV400. Visítanos o escríbenos para conocer disponibilidad y probártelas.</p>
+  <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20conocer%20el%20cat%C3%A1logo%20de%20gafas%20de%20sol" class="btn btn-dark" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+</div>
+
+<div class="gs-back-wrap">
+  <a href="index.html" class="gs-back">← Volver al inicio</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col footer-col-brand">
+      <a href="index.html#top" class="logo logo-footer">
+        <img src="LOGO.png" alt="MENVI Eyewear" class="logo-img logo-img-footer" />
+      </a>
+      <p class="footer-tag"><em>Transformamos tu forma de ver el mundo.</em></p>
+    </div>
+    <div class="footer-col">
+      <h5>Productos</h5>
+      <a href="index.html#productos">Monturas Hombre</a>
+      <a href="index.html#productos">Monturas Mujer</a>
+      <a href="index.html#productos">Monturas Niños</a>
+      <a href="gafas-sol.html">Gafas de Sol</a>
+      <a href="index.html#productos">Lentes de Contacto</a>
+      <a href="index.html#servicios">Examen Visual</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contacto</h5>
+      <span style="display:block;font-size:14px;color:rgba(255,255,255,.55);margin-bottom:10px;">Carrera 11 # 76 - 14. Local 103</span>
+      <a href="mailto:opticasmenvi@hotmail.com">opticasmenvi@hotmail.com</a>
+      <a href="index.html#contacto">Agendar cita</a>
+    </div>
+    <div class="footer-col">
+      <h5>Nosotros</h5>
+      <a href="quienes-somos.html">Quiénes Somos</a>
+      <a href="terminos.html">Términos y Condiciones</a>
+      <a href="garantia.html">Políticas de Garantía</a>
+    </div>
+    <div class="footer-col">
+      <h5>Síguenos</h5>
+      <div class="social">
+        <a href="https://www.instagram.com/menvieyewear/" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+        <a href="https://www.facebook.com/menvieyewear" aria-label="Facebook" target="_blank" rel="noopener">FB</a>
+        <a href="https://www.tiktok.com/@menvieyewear" aria-label="TikTok" target="_blank" rel="noopener">TT</a>
+      </div>
+      <a href="https://www.instagram.com/menvieyewear/" class="footer-handle" target="_blank" rel="noopener">@menvieyewear</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 MENVI Eyewear · Todos los derechos reservados.</span>
+    <a href="terminos.html" style="color:inherit;opacity:.6;font-size:.8em;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;">Términos y Condiciones</a>
+  </div>
+</footer>
+
+<a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20agendar%20un%20examen%20visual" class="wa-float" aria-label="WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.4 8.6 3.4 15.6c0 2.3.6 4.5 1.7 6.4L3 29l7.2-2c1.8 1 3.8 1.5 5.8 1.5h.1c7 0 12.6-5.6 12.6-12.6S23 3 16 3zm0 22.9c-1.7 0-3.4-.4-4.8-1.3l-.3-.2-3.6 1 1-3.5-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 9.7-10 9.7zm5.5-7.2c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0c-1.8-.9-3-1.6-4.2-3.6-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1.1 1.1-1.1 2.6 1.1 3 1.3 3.2 2.2 3.4 5.4 4.7c.7.3 1.3.5 1.8.7.8.2 1.5.2 2 .1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+  <span class="wa-float-pulse"></span>
+  <span class="wa-float-tooltip">Consultar por WhatsApp</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
