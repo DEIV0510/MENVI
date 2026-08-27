@@ -39,6 +39,40 @@
     margin: 0 auto;
   }
 
+  /* FILTER */
+  .gs-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 24px 48px;
+  }
+  .gs-filter-btn {
+    padding: 10px 22px;
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    background: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #111;
+    cursor: pointer;
+    transition: background .25s, color .25s, border-color .25s;
+  }
+  .gs-filter-btn:hover { border-color: #111; }
+  .gs-filter-btn.active { background: #111; border-color: #111; color: #fff; }
+  .gs-filter-count {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #999;
+    margin: -32px 0 32px;
+  }
+
   /* GRID */
   .gs-grid {
     display: grid;
@@ -229,11 +263,19 @@
   <p>Una selección deportiva y de autor: Nike, Adidas y Monastery. Cada modelo combina filtro UV400, materiales resistentes y un diseño que hace parte de tu estilo.</p>
 </header>
 
+<!-- FILTER -->
+<div class="gs-filter-bar" role="tablist" aria-label="Filtrar por marca">
+  <button type="button" class="gs-filter-btn active" data-filter="nike" role="tab" aria-selected="true">Nike</button>
+  <button type="button" class="gs-filter-btn" data-filter="adidas" role="tab" aria-selected="false">Adidas</button>
+  <button type="button" class="gs-filter-btn" data-filter="monastery" role="tab" aria-selected="false">Monastery</button>
+</div>
+<p class="gs-filter-count" id="gsFilterCount"></p>
+
 <!-- GRID -->
-<div class="gs-grid">
+<div class="gs-grid" id="gsGrid">
 
   <!-- 1 -->
-  <div class="gs-card">
+  <div class="gs-card" data-brand="nike">
     <div class="gs-card-img">
       <span class="gs-card-brand">Nike</span>
       <img src="imgs2/gafas-nike-field.jpg" alt="Nike Field, gafas deportivas gris con lente espejado" loading="lazy" />
@@ -248,7 +290,7 @@
   </div>
 
   <!-- 2 -->
-  <div class="gs-card">
+  <div class="gs-card" data-brand="nike">
     <div class="gs-card-img">
       <span class="gs-card-brand">Nike</span>
       <img src="imgs2/gafas-nike-road-durazno.jpg" alt="Nike Road, gafas deportivas durazno con lente morado" loading="lazy" />
@@ -263,7 +305,7 @@
   </div>
 
   <!-- 3 -->
-  <div class="gs-card">
+  <div class="gs-card" data-brand="nike">
     <div class="gs-card-img">
       <span class="gs-card-brand">Nike</span>
       <img src="imgs2/gafas-nike-road-naranja.jpg" alt="Nike Road, gafas deportivas naranja con lente morado" loading="lazy" />
@@ -278,7 +320,7 @@
   </div>
 
   <!-- 4 -->
-  <div class="gs-card">
+  <div class="gs-card" data-brand="nike">
     <div class="gs-card-img">
       <span class="gs-card-brand">Nike</span>
       <img src="imgs2/gafas-nike-max.jpg" alt="Nike Max, gafas negras estilo aviador" loading="lazy" />
@@ -293,7 +335,7 @@
   </div>
 
   <!-- 5 -->
-  <div class="gs-card">
+  <div class="gs-card" data-brand="nike">
     <div class="gs-card-img">
       <span class="gs-card-brand">Nike</span>
       <img src="imgs2/gafas-nike-sport-negro.jpg" alt="Nike, gafas deportivas negras con lente verde oscuro" loading="lazy" />
@@ -308,7 +350,7 @@
   </div>
 
   <!-- 6 -->
-  <div class="gs-card">
+  <div class="gs-card" data-brand="nike">
     <div class="gs-card-img">
       <span class="gs-card-brand">Nike ACG</span>
       <img src="imgs2/gafas-nike-acg-caqui.jpg" alt="Nike ACG, gafas caqui All Conditions Gear" loading="lazy" />
@@ -323,7 +365,7 @@
   </div>
 
   <!-- 7 -->
-  <div class="gs-card">
+  <div class="gs-card" data-brand="nike">
     <div class="gs-card-img">
       <span class="gs-card-brand">Nike</span>
       <img src="imgs2/gafas-nike-maxoptics-pro.jpg" alt="Nike Max Optics Pro, gafas negras con lente verde-azul" loading="lazy" />
@@ -338,7 +380,7 @@
   </div>
 
   <!-- 8 -->
-  <div class="gs-card">
+  <div class="gs-card" data-brand="adidas">
     <div class="gs-card-img">
       <span class="gs-card-brand">Adidas</span>
       <img src="imgs2/gafas-adidas-blanco-azul.jpg" alt="Adidas, gafas blancas y azules con lente espejado" loading="lazy" />
@@ -353,7 +395,7 @@
   </div>
 
   <!-- 9 -->
-  <div class="gs-card">
+  <div class="gs-card" data-brand="adidas">
     <div class="gs-card-img">
       <span class="gs-card-brand">Adidas</span>
       <img src="imgs2/gafas-adidas-negro-champan.jpg" alt="Adidas, gafas negras con lente champán" loading="lazy" />
@@ -368,7 +410,7 @@
   </div>
 
   <!-- 10 -->
-  <div class="gs-card">
+  <div class="gs-card" data-brand="adidas">
     <div class="gs-card-img">
       <span class="gs-card-brand">Adidas</span>
       <img src="imgs2/gafas-adidas-negro-rojo.jpg" alt="Adidas, gafas negras con lente espejado rojo" loading="lazy" />
@@ -383,7 +425,7 @@
   </div>
 
   <!-- 11 -->
-  <div class="gs-card">
+  <div class="gs-card" data-brand="adidas">
     <div class="gs-card-img">
       <span class="gs-card-brand">Adidas</span>
       <img src="imgs2/gafas-adidas-cafe-iridiscente.jpg" alt="Adidas, gafas cafe iridiscente con lente dorado" loading="lazy" />
@@ -398,7 +440,7 @@
   </div>
 
   <!-- 12 -->
-  <div class="gs-card">
+  <div class="gs-card" data-brand="adidas">
     <div class="gs-card-img">
       <span class="gs-card-brand">Adidas Originals</span>
       <img src="imgs2/gafas-adidas-transparente-gris.jpg" alt="Adidas Originals, gafas transparentes con lente morado" loading="lazy" />
@@ -413,7 +455,7 @@
   </div>
 
   <!-- 13 -->
-  <div class="gs-card">
+  <div class="gs-card" data-brand="adidas">
     <div class="gs-card-img">
       <span class="gs-card-brand">Adidas Originals</span>
       <img src="imgs2/gafas-adidas-rojo.jpg" alt="Adidas Originals, gafas rojas cuadradas" loading="lazy" />
@@ -428,7 +470,7 @@
   </div>
 
   <!-- 14 -->
-  <div class="gs-card">
+  <div class="gs-card" data-brand="adidas">
     <div class="gs-card-img">
       <span class="gs-card-brand">Adidas Originals</span>
       <img src="imgs2/gafas-adidas-celeste.jpg" alt="Adidas Originals, gafas celestes estilo cat-eye" loading="lazy" />
@@ -443,7 +485,7 @@
   </div>
 
   <!-- 15 -->
-  <div class="gs-card">
+  <div class="gs-card" data-brand="adidas">
     <div class="gs-card-img">
       <span class="gs-card-brand">Adidas Originals</span>
       <img src="imgs2/gafas-adidas-negro-catseye.jpg" alt="Adidas Originals, gafas negras estilo cat-eye" loading="lazy" />
@@ -458,7 +500,7 @@
   </div>
 
   <!-- 16 -->
-  <div class="gs-card">
+  <div class="gs-card" data-brand="monastery">
     <div class="gs-card-img">
       <span class="gs-card-brand">Monastery</span>
       <img src="imgs2/gafas-monastery-plata.jpg" alt="Monastery, gafas sin marco con detalles en plata" loading="lazy" />
@@ -538,5 +580,36 @@
 </a>
 
 <script src="script.js"></script>
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('.gs-filter-btn');
+    var cards = document.querySelectorAll('#gsGrid .gs-card');
+    var countEl = document.getElementById('gsFilterCount');
+    var labels = { nike: 'Nike', adidas: 'Adidas', monastery: 'Monastery' };
+
+    function applyFilter(brand) {
+      var visible = 0;
+      cards.forEach(function (card) {
+        var match = card.getAttribute('data-brand') === brand;
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      buttons.forEach(function (btn) {
+        var isActive = btn.getAttribute('data-filter') === brand;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      countEl.textContent = visible + ' referencias ' + labels[brand];
+    }
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        applyFilter(btn.getAttribute('data-filter'));
+      });
+    });
+
+    applyFilter('nike');
+  })();
+</script>
 </body>
 </html>

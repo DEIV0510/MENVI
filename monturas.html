@@ -45,20 +45,22 @@
     gap: 12px;
     padding: 0 24px 56px;
   }
-  .mo-jump a {
+  .mo-jump-btn {
     padding: 10px 20px;
     border: 1px solid #ddd;
     border-radius: 999px;
+    background: #fff;
     font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: .1em;
     text-transform: uppercase;
-    text-decoration: none;
     color: #111;
-    transition: background .25s, color .25s;
+    cursor: pointer;
+    transition: background .25s, color .25s, border-color .25s;
   }
-  .mo-jump a:hover { background: #111; color: #fff; }
+  .mo-jump-btn:hover { border-color: #111; }
+  .mo-jump-btn.active { background: #111; border-color: #111; color: #fff; }
 
   .mo-brand-section { padding: 0 40px 24px; max-width: 1280px; margin: 0 auto; scroll-margin-top: 100px; }
   .mo-brand-head {
@@ -66,10 +68,9 @@
     align-items: baseline;
     justify-content: space-between;
     gap: 16px;
-    padding: 40px 0 26px;
-    border-top: 1px solid #e5e5e5;
+    padding: 8px 0 26px;
+    border-top: none;
   }
-  .mo-brand-section:first-of-type .mo-brand-head { border-top: none; }
   .mo-brand-head h2 {
     font-family: 'Bodoni Moda', 'Playfair Display', serif;
     font-weight: 500;
@@ -261,11 +262,11 @@
   <p>Una selección para hombre y mujer en cuatro marcas: Reebok, Frida Kahlo, Kenneth Cole Reaction y Perry Ellis. Acetato y metal, listos para tu fórmula.</p>
 </header>
 
-<nav class="mo-jump" aria-label="Ir a marca">
-  <a href="#reebok">Reebok</a>
-  <a href="#fridakahlo">Frida Kahlo</a>
-  <a href="#reaction">Kenneth Cole Reaction</a>
-  <a href="#perryellis">Perry Ellis</a>
+<nav class="mo-jump" role="tablist" aria-label="Filtrar por marca">
+  <button type="button" class="mo-jump-btn active" data-filter="reebok" role="tab" aria-selected="true">Reebok</button>
+  <button type="button" class="mo-jump-btn" data-filter="fridakahlo" role="tab" aria-selected="false">Frida Kahlo</button>
+  <button type="button" class="mo-jump-btn" data-filter="reaction" role="tab" aria-selected="false">Kenneth Cole Reaction</button>
+  <button type="button" class="mo-jump-btn" data-filter="perryellis" role="tab" aria-selected="false">Perry Ellis</button>
 </nav>
 
 <section class="mo-brand-section" id="reebok">
@@ -983,5 +984,31 @@
 </a>
 
 <script src="script.js"></script>
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('.mo-jump-btn');
+    var sections = document.querySelectorAll('.mo-brand-section');
+
+    function applyFilter(brand) {
+      sections.forEach(function (section) {
+        section.style.display = section.id === brand ? '' : 'none';
+      });
+      buttons.forEach(function (btn) {
+        var isActive = btn.getAttribute('data-filter') === brand;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+    }
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        applyFilter(btn.getAttribute('data-filter'));
+        btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      });
+    });
+
+    applyFilter('reebok');
+  })();
+</script>
 </body>
 </html>
