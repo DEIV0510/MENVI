@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Monturas · MENVI Eyewear</title>
-<meta name="description" content="Catálogo de monturas MENVI Eyewear: Reebok, Frida Kahlo, Kenneth Cole Reaction y Perry Ellis. Armazones para hombre y mujer en acetato y metal." />
+<meta name="description" content="Catálogo de monturas MENVI Eyewear: Reebok, Frida Kahlo, Kenneth Cole Reaction y Perry Ellis. Armazones para hombre y mujer en acetato y metal, con referencia, color y talla." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Montserrat:wght@200;300;400;500;600;700&family=Questrial&display=swap" rel="stylesheet">
@@ -69,7 +69,6 @@
     justify-content: space-between;
     gap: 16px;
     padding: 8px 0 26px;
-    border-top: none;
   }
   .mo-brand-head h2 {
     font-family: 'Bodoni Moda', 'Playfair Display', serif;
@@ -118,6 +117,20 @@
     object-fit: cover;
     transition: transform .5s cubic-bezier(.2,.6,.2,1);
   }
+  .mo-card-noimg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #bbb;
+    background: repeating-linear-gradient(135deg, #fafafa, #fafafa 10px, #f2f2f2 10px, #f2f2f2 20px);
+  }
   .mo-card:hover .mo-card-img img { transform: scale(1.05); }
   .mo-card-brand {
     position: absolute;
@@ -150,7 +163,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     font-weight: 600;
-    letter-spacing: .16em;
+    letter-spacing: .1em;
     text-transform: uppercase;
     color: #999;
     margin-bottom: 8px;
@@ -168,6 +181,13 @@
     font-weight: 300;
     color: #666;
     line-height: 1.6;
+    margin: 0 0 12px;
+  }
+  .mo-card-size {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: #888;
     margin: 0 0 18px;
   }
   .mo-card-cta {
@@ -259,7 +279,7 @@
 <header class="mo-hero">
   <span class="kicker">Monturas</span>
   <h1>Armazones con carácter propio</h1>
-  <p>Una selección para hombre y mujer en cuatro marcas: Reebok, Frida Kahlo, Kenneth Cole Reaction y Perry Ellis. Acetato y metal, listos para tu fórmula.</p>
+  <p>48 referencias para hombre y mujer en cuatro marcas: Reebok, Frida Kahlo, Kenneth Cole Reaction y Perry Ellis. Acetato y metal, con referencia, color y talla exactas.</p>
 </header>
 
 <nav class="mo-jump" role="tablist" aria-label="Filtrar por marca">
@@ -272,7 +292,7 @@
 <section class="mo-brand-section" id="reebok">
   <div class="mo-brand-head">
     <h2>Reebok</h2>
-    <span class="mo-brand-count">11 referencias</span>
+    <span class="mo-brand-count">10 referencias</span>
   </div>
   <div class="mo-grid">
 
@@ -280,143 +300,140 @@
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-reebok-cuadrada-negra.jpg" alt="Reebok, Armazón cuadrado negro mate" loading="lazy" />
+      <img src="imgs2/mont-reebok-rbk1039-677.jpg" alt="Reebok, Redonda azul marino" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Reebok</div>
-      <h3 class="mo-card-title">Armazón cuadrado negro mate</h3>
-      <p class="mo-card-text">Acetato negro mate de bisel grueso y varilla ancha. Una base clásica y resistente para uso diario.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20-%20Armaz%C3%B3n%20cuadrado%20negro%20mate" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
-    </div>
-  </div>
-  <div class="mo-card">
-    <div class="mo-card-img">
-      <span class="mo-card-brand">Reebok</span>
-      <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-reebok-redonda-azul.jpg" alt="Reebok, Armazón redondo azul marino" loading="lazy" />
-    </div>
-    <div class="mo-card-body">
-      <div class="mo-card-line">Reebok</div>
-      <h3 class="mo-card-title">Armazón redondo azul marino</h3>
-      <p class="mo-card-text">Acetato azul marino mate con varilla metálica plateada y logo Reebok. Silueta redonda de aire retro.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20-%20Armaz%C3%B3n%20redondo%20azul%20marino" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. RBK1039 · Color 677</div>
+      <h3 class="mo-card-title">Redonda azul marino</h3>
+      <p class="mo-card-text">Montura en acetato con brazos metálicos.</p>
+      <div class="mo-card-size">Talla 52-21-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK1039%20-%20Redonda%20azul%20marino" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-reebok-redonda-cafe-rosado.jpg" alt="Reebok, Armazón redondo café rosado" loading="lazy" />
+      <img src="imgs2/mont-reebok-rbk1035-275.jpg" alt="Reebok, Redonda rosa translúcida" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Reebok</div>
-      <h3 class="mo-card-title">Armazón redondo café rosado</h3>
-      <p class="mo-card-text">Acetato translúcido café rosado con placa dorada Reebok en la varilla. Un tono cálido y versátil.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20-%20Armaz%C3%B3n%20redondo%20caf%C3%A9%20rosado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
-    </div>
-  </div>
-  <div class="mo-card">
-    <div class="mo-card-img">
-      <span class="mo-card-brand">Reebok</span>
-      <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-reebok-catseye-negro-amarillo.jpg" alt="Reebok, Cat-eye negro y amarillo" loading="lazy" />
-    </div>
-    <div class="mo-card-body">
-      <div class="mo-card-line">Reebok</div>
-      <h3 class="mo-card-title">Cat-eye negro y amarillo</h3>
-      <p class="mo-card-text">Montura semi al aire en metal negro y gris con puntas en amarillo vibrante. Silueta felina de carácter.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20-%20Cat-eye%20negro%20y%20amarillo" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. RBK1035 · Color 275</div>
+      <h3 class="mo-card-title">Redonda rosa translúcida</h3>
+      <p class="mo-card-text">Montura en acetato.</p>
+      <div class="mo-card-size">Talla 50-20-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK1035%20-%20Redonda%20rosa%20transl%C3%BAcida" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Unisex</span>
-      <img src="imgs2/montura-reebok-redonda-gris.jpg" alt="Reebok, Armazón redondo gris transparente" loading="lazy" />
+      <img src="imgs2/mont-reebok-rbk3020-4.jpg" alt="Reebok, Metálica con puntas amarillas" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Reebok</div>
-      <h3 class="mo-card-title">Armazón redondo gris transparente</h3>
-      <p class="mo-card-text">Acetato gris transparente de silueta panto clásica, liviano y fácil de combinar con cualquier look.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20-%20Armaz%C3%B3n%20redondo%20gris%20transparente" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. RBK3020 · Color 4</div>
+      <h3 class="mo-card-title">Metálica con puntas amarillas</h3>
+      <p class="mo-card-text">Montura metálica.</p>
+      <div class="mo-card-size">Talla 55-16-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK3020%20-%20Met%C3%A1lica%20con%20puntas%20amarillas" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+  <div class="mo-card">
+    <div class="mo-card-img">
+      <span class="mo-card-brand">Reebok</span>
+      <span class="mo-card-gender">Unisex</span>
+      <img src="imgs2/mont-reebok-rbk1035-994.jpg" alt="Reebok, Redonda gris translúcida" loading="lazy" />
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-card-line">Ref. RBK1035 · Color 994</div>
+      <h3 class="mo-card-title">Redonda gris translúcida</h3>
+      <p class="mo-card-text">Montura en acetato.</p>
+      <div class="mo-card-size">Talla 50-20-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK1035%20-%20Redonda%20gris%20transl%C3%BAcida" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-reebok-cuadrada-carey.jpg" alt="Reebok, Armazón cuadrado jaspeado" loading="lazy" />
+      <img src="imgs2/mont-reebok-rbk1013-916.jpg" alt="Reebok, Rectangular jaspeada" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Reebok</div>
-      <h3 class="mo-card-title">Armazón cuadrado jaspeado</h3>
-      <p class="mo-card-text">Acetato jaspeado gris y negro estilo carey, con puentera roja y detalle metálico. Un statement sutil.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20-%20Armaz%C3%B3n%20cuadrado%20jaspeado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
-    </div>
-  </div>
-  <div class="mo-card">
-    <div class="mo-card-img">
-      <span class="mo-card-brand">Reebok</span>
-      <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-reebok-redonda-rosa.jpg" alt="Reebok, Armazón redondo rosa palo" loading="lazy" />
-    </div>
-    <div class="mo-card-body">
-      <div class="mo-card-line">Reebok</div>
-      <h3 class="mo-card-title">Armazón redondo rosa palo</h3>
-      <p class="mo-card-text">Acetato translúcido rosa palo de silueta panto delicada, con placa amarilla Reebok en la varilla.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20-%20Armaz%C3%B3n%20redondo%20rosa%20palo" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. RBK1013 · Color 916</div>
+      <h3 class="mo-card-title">Rectangular jaspeada</h3>
+      <p class="mo-card-text">Montura en acetato negro jaspeado con brazos metálicos.</p>
+      <div class="mo-card-size">Talla 55-19-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK1013%20-%20Rectangular%20jaspeada" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-reebok-redonda-negra-roja.jpg" alt="Reebok, Armazón redondo negro y rojo" loading="lazy" />
+      <img src="imgs2/mont-reebok-rbk3019-600.jpg" alt="Reebok, Rectangular metálica plateada" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Reebok</div>
-      <h3 class="mo-card-title">Armazón redondo negro y rojo</h3>
-      <p class="mo-card-text">Acetato negro brillante con una fina línea roja en el borde superior. Elegante y de bajo perfil.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20-%20Armaz%C3%B3n%20redondo%20negro%20y%20rojo" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. RBK3019 · Color 600</div>
+      <h3 class="mo-card-title">Rectangular metálica plateada</h3>
+      <p class="mo-card-text">Montura metálica.</p>
+      <div class="mo-card-size">Talla 54-17-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK3019%20-%20Rectangular%20met%C3%A1lica%20plateada" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-reebok-rectangular-verde.jpg" alt="Reebok, Armazón rectangular verde botella" loading="lazy" />
+      <img src="imgs2/mont-reebok-rbk1027-500.jpg" alt="Reebok, Rectangular verde botella" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Reebok</div>
-      <h3 class="mo-card-title">Armazón rectangular verde botella</h3>
-      <p class="mo-card-text">Acetato verde botella brillante con varilla metálica dorada. Un color statement de línea clásica.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20-%20Armaz%C3%B3n%20rectangular%20verde%20botella" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. RBK1027 · Color 500</div>
+      <h3 class="mo-card-title">Rectangular verde botella</h3>
+      <p class="mo-card-text">Montura con frente en acetato verde y brazos metálicos dorados.</p>
+      <div class="mo-card-size">Talla 54-17-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK1027%20-%20Rectangular%20verde%20botella" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-reebok-cuadrada-plateada.jpg" alt="Reebok, Armazón metálico plateado" loading="lazy" />
+      <img src="imgs2/mont-reebok-rbk1009-2.jpg" alt="Reebok, Redonda negra" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Reebok</div>
-      <h3 class="mo-card-title">Armazón metálico plateado</h3>
-      <p class="mo-card-text">Montura metálica cuadrada en tono plateado con varillas rematadas en carey. Corte ejecutivo atemporal.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20-%20Armaz%C3%B3n%20met%C3%A1lico%20plateado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. RBK1009 · Color 2</div>
+      <h3 class="mo-card-title">Redonda negra</h3>
+      <p class="mo-card-text">Montura en acetato.</p>
+      <div class="mo-card-size">Talla 52-21-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK1009%20-%20Redonda%20negra" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-reebok-rectangular-negra.jpg" alt="Reebok, Armazón rectangular negro brillante" loading="lazy" />
+      <img src="imgs2/mont-reebok-rbk1038-402.jpg" alt="Reebok, Metálica con detalle carey" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Reebok</div>
-      <h3 class="mo-card-title">Armazón rectangular negro brillante</h3>
-      <p class="mo-card-text">Acetato negro brillante con varillas metálicas plateadas. Una base versátil para uso diario.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20-%20Armaz%C3%B3n%20rectangular%20negro%20brillante" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. RBK1038 · Color 402</div>
+      <h3 class="mo-card-title">Metálica con detalle carey</h3>
+      <p class="mo-card-text">Montura metálica con diseño en el brazo en acetato carey.</p>
+      <div class="mo-card-size">Talla 55-19-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK1038%20-%20Met%C3%A1lica%20con%20detalle%20carey" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+  <div class="mo-card">
+    <div class="mo-card-img">
+      <span class="mo-card-brand">Reebok</span>
+      <span class="mo-card-gender">Hombre</span>
+      <img src="imgs2/mont-reebok-rbk1027-1.jpg" alt="Reebok, Rectangular negra" loading="lazy" />
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-card-line">Ref. RBK1027 · Color 1</div>
+      <h3 class="mo-card-title">Rectangular negra</h3>
+      <p class="mo-card-text">Montura en acetato con brazos metálicos.</p>
+      <div class="mo-card-size">Talla 54-17-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK1027%20-%20Rectangular%20negra" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   </div>
@@ -433,156 +450,168 @@
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-fridakahlo-catseye-nude.jpg" alt="Frida Kahlo, Cat-eye oversize nude" loading="lazy" />
+      <img src="imgs2/mont-fridakahlo-fk1020m-pi-autorretratos.jpg" alt="Frida Kahlo, Cat-eye dorado y rosa" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Frida Kahlo</div>
-      <h3 class="mo-card-title">Cat-eye oversize nude</h3>
-      <p class="mo-card-text">Acetato rosado nude brillante en silueta cat-eye cuadrada y oversize. Un statement femenino de autor.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20-%20Cat-eye%20oversize%20nude" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. FK1020M-PI · Autorretratos</div>
+      <h3 class="mo-card-title">Cat-eye dorado y rosa</h3>
+      <p class="mo-card-text">Montura con frente metálico dorado con brazos en acetato rosa.</p>
+      <div class="mo-card-size">Talla 53-17-140</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1020M-PI%20-%20Cat-eye%20dorado%20y%20rosa" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-fridakahlo-catseye-rosa-floral.jpg" alt="Frida Kahlo, Cat-eye rosa con herrajes florales" loading="lazy" />
+      <img src="imgs2/mont-fridakahlo-fk1028a-f-ra-ces.jpg" alt="Frida Kahlo, Cat-eye vino jaspeado" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Frida Kahlo</div>
-      <h3 class="mo-card-title">Cat-eye rosa con herrajes florales</h3>
-      <p class="mo-card-text">Acetato rosa transparente con herrajes florales dorados y varillas en carey. Delicado y distintivo.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20-%20Cat-eye%20rosa%20con%20herrajes%20florales" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
-    </div>
-  </div>
-  <div class="mo-card">
-    <div class="mo-card-img">
-      <span class="mo-card-brand">Frida Kahlo</span>
-      <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-fridakahlo-catseye-mariposas-dorado.jpg" alt="Frida Kahlo, Cat-eye oro rosa con mariposas" loading="lazy" />
-    </div>
-    <div class="mo-card-body">
-      <div class="mo-card-line">Frida Kahlo</div>
-      <h3 class="mo-card-title">Cat-eye oro rosa con mariposas</h3>
-      <p class="mo-card-text">Montura metálica cat-eye en oro rosa con mariposas caladas en las varillas. Una pieza con historia.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20-%20Cat-eye%20oro%20rosa%20con%20mariposas" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
-    </div>
-  </div>
-  <div class="mo-card">
-    <div class="mo-card-img">
-      <span class="mo-card-brand">Frida Kahlo</span>
-      <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-fridakahlo-catseye-rosa-pastel.jpg" alt="Frida Kahlo, Cat-eye semi al aire rosa pastel" loading="lazy" />
-    </div>
-    <div class="mo-card-body">
-      <div class="mo-card-line">Frida Kahlo</div>
-      <h3 class="mo-card-title">Cat-eye semi al aire rosa pastel</h3>
-      <p class="mo-card-text">Silueta semi al aire en acetato rosa pastel con marco inferior metálico dorado. Suave y luminosa.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20-%20Cat-eye%20semi%20al%20aire%20rosa%20pastel" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
-    </div>
-  </div>
-  <div class="mo-card">
-    <div class="mo-card-img">
-      <span class="mo-card-brand">Frida Kahlo</span>
-      <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-fridakahlo-catseye-vino.jpg" alt="Frida Kahlo, Cat-eye vino jaspeado" loading="lazy" />
-    </div>
-    <div class="mo-card-body">
-      <div class="mo-card-line">Frida Kahlo</div>
+      <div class="mo-card-line">Ref. FK1028A-F · Raíces</div>
       <h3 class="mo-card-title">Cat-eye vino jaspeado</h3>
-      <p class="mo-card-text">Acetato vino jaspeado con calado floral dorado en la varilla. Un tono profundo con detalle de autor.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20-%20Cat-eye%20vino%20jaspeado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <p class="mo-card-text">Montura con frente en acetato y brazos metálicos.</p>
+      <div class="mo-card-size">Talla 54-16-140</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1028A-F%20-%20Cat-eye%20vino%20jaspeado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-fridakahlo-catseye-negro-dorado.jpg" alt="Frida Kahlo, Cat-eye negro y dorado" loading="lazy" />
+      <img src="imgs2/mont-fridakahlo-fk1021a-bu-autorretratos.jpg" alt="Frida Kahlo, Cat-eye rojo vino" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Frida Kahlo</div>
+      <div class="mo-card-line">Ref. FK1021A-BU · Autorretratos</div>
+      <h3 class="mo-card-title">Cat-eye rojo vino</h3>
+      <p class="mo-card-text">Montura en acetato.</p>
+      <div class="mo-card-size">Talla 52-17-140</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1021A-BU%20-%20Cat-eye%20rojo%20vino" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+  <div class="mo-card">
+    <div class="mo-card-img">
+      <span class="mo-card-brand">Frida Kahlo</span>
+      <span class="mo-card-gender">Mujer</span>
+      <img src="imgs2/mont-fridakahlo-fk1011m-bl-pasi-n-por-la-vida.jpg" alt="Frida Kahlo, Cat-eye negro y dorado" loading="lazy" />
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-card-line">Ref. FK1011M-BL · Pasión por la Vida</div>
       <h3 class="mo-card-title">Cat-eye negro y dorado</h3>
-      <p class="mo-card-text">Montura metálica en negro y dorado con mariposas caladas y medallón en la bisagra. Ícono y actitud.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20-%20Cat-eye%20negro%20y%20dorado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <p class="mo-card-text">Montura con frente metálico negro con brazos en acetato.</p>
+      <div class="mo-card-size">Talla 55-18-140</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1011M-BL%20-%20Cat-eye%20negro%20y%20dorado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-fridakahlo-cuadrada-dorado-burdeos.jpg" alt="Frida Kahlo, Armazón dorado con borde burdeos" loading="lazy" />
+      <img src="imgs2/mont-fridakahlo-fk1021a-bl-autorretratos.jpg" alt="Frida Kahlo, Cat-eye negro" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Frida Kahlo</div>
-      <h3 class="mo-card-title">Armazón dorado con borde burdeos</h3>
-      <p class="mo-card-text">Montura metálica cuadrada en dorado con borde superior burdeos y varillas en carey rojizo.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20-%20Armaz%C3%B3n%20dorado%20con%20borde%20burdeos" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. FK1021A-BL · Autorretratos</div>
+      <h3 class="mo-card-title">Cat-eye negro</h3>
+      <p class="mo-card-text">Montura en acetato.</p>
+      <div class="mo-card-size">Talla 52-17-140</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1021A-BL%20-%20Cat-eye%20negro" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-fridakahlo-catseye-negro-carey.jpg" alt="Frida Kahlo, Cat-eye semi al aire negro y dorado" loading="lazy" />
+      <img src="imgs2/mont-fridakahlo-fk1003a-pi-pasi-n-por-la-vida.jpg" alt="Frida Kahlo, Cat-eye rosa con brazos dorados" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Frida Kahlo</div>
-      <h3 class="mo-card-title">Cat-eye semi al aire negro y dorado</h3>
-      <p class="mo-card-text">Silueta semi al aire en negro y dorado con varillas en carey. Un equilibrio entre lo clásico y lo audaz.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20-%20Cat-eye%20semi%20al%20aire%20negro%20y%20dorado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. FK1003A-PI · Pasión por la Vida</div>
+      <h3 class="mo-card-title">Cat-eye rosa con brazos dorados</h3>
+      <p class="mo-card-text">Montura en acetato con brazos metálicos.</p>
+      <div class="mo-card-size">Talla 53-17-135</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1003A-PI%20-%20Cat-eye%20rosa%20con%20brazos%20dorados" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-fridakahlo-catseye-rojo-vino.jpg" alt="Frida Kahlo, Cat-eye rojo vino con mariposa" loading="lazy" />
+      <img src="imgs2/mont-fridakahlo-fk1030m-bl-ra-ces.jpg" alt="Frida Kahlo, Metálica negra con filigrana" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Frida Kahlo</div>
-      <h3 class="mo-card-title">Cat-eye rojo vino con mariposa</h3>
-      <p class="mo-card-text">Acetato rojo vino brillante con emblema y mariposa dorados estampados en la varilla. Vibrante y femenino.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20-%20Cat-eye%20rojo%20vino%20con%20mariposa" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. FK1030M-BL · Raíces</div>
+      <h3 class="mo-card-title">Metálica negra con filigrana</h3>
+      <p class="mo-card-text">Montura metálica.</p>
+      <div class="mo-card-size">Talla 54-18-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1030M-BL%20-%20Met%C3%A1lica%20negra%20con%20filigrana" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-fridakahlo-catseye-negro-mariposa.jpg" alt="Frida Kahlo, Cat-eye negro con mariposa dorada" loading="lazy" />
+      <img src="imgs2/mont-fridakahlo-fk1017a-po-autorretratos.jpg" alt="Frida Kahlo, Cat-eye oversize nude" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Frida Kahlo</div>
-      <h3 class="mo-card-title">Cat-eye negro con mariposa dorada</h3>
-      <p class="mo-card-text">Acetato negro brillante con emblema y mariposa dorados estampados en la varilla. Un básico con carácter.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20-%20Cat-eye%20negro%20con%20mariposa%20dorada" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. FK1017A-PO · Autorretratos</div>
+      <h3 class="mo-card-title">Cat-eye oversize nude</h3>
+      <p class="mo-card-text">Montura chunky en acetato.</p>
+      <div class="mo-card-size">Talla 54-16-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1017A-PO%20-%20Cat-eye%20oversize%20nude" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-fridakahlo-catseye-carey-cafe.jpg" alt="Frida Kahlo, Cat-eye carey café" loading="lazy" />
+      <img src="imgs2/mont-fridakahlo-fk1030m-pi-ra-ces.jpg" alt="Frida Kahlo, Metálica oro rosa con filigrana" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Frida Kahlo</div>
-      <h3 class="mo-card-title">Cat-eye carey café</h3>
-      <p class="mo-card-text">Acetato carey café con mariposas doradas estampadas en la varilla. Cálido, terroso y elegante.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20-%20Cat-eye%20carey%20caf%C3%A9" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. FK1030M-PI · Raíces</div>
+      <h3 class="mo-card-title">Metálica oro rosa con filigrana</h3>
+      <p class="mo-card-text">Montura metálica.</p>
+      <div class="mo-card-size">Talla 54-18-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1030M-PI%20-%20Met%C3%A1lica%20oro%20rosa%20con%20filigrana" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-fridakahlo-catseye-geometrico.jpg" alt="Frida Kahlo, Cat-eye geométrico floral" loading="lazy" />
+      <img src="imgs2/mont-fridakahlo-fk1035a-ro-ra-ces.jpg" alt="Frida Kahlo, Cat-eye carey miel" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Frida Kahlo</div>
-      <h3 class="mo-card-title">Cat-eye geométrico floral</h3>
-      <p class="mo-card-text">Silueta geométrica cat-eye en acetato negro con puente metálico dorado y varillas en estampado floral.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20-%20Cat-eye%20geom%C3%A9trico%20floral" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. FK1035A-RO · Raíces</div>
+      <h3 class="mo-card-title">Cat-eye carey miel</h3>
+      <p class="mo-card-text">Montura en acetato.</p>
+      <div class="mo-card-size">Talla 53-17-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1035A-RO%20-%20Cat-eye%20carey%20miel" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+  <div class="mo-card">
+    <div class="mo-card-img">
+      <span class="mo-card-brand">Frida Kahlo</span>
+      <span class="mo-card-gender">Mujer</span>
+      <img src="imgs2/mont-fridakahlo-fk1007m-bl-pasi-n-por-la-vida.jpg" alt="Frida Kahlo, Cat-eye negro y dorado" loading="lazy" />
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-card-line">Ref. FK1007M-BL · Pasión por la Vida</div>
+      <h3 class="mo-card-title">Cat-eye negro y dorado</h3>
+      <p class="mo-card-text">Montura metálica.</p>
+      <div class="mo-card-size">Talla 55-17-140</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1007M-BL%20-%20Cat-eye%20negro%20y%20dorado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+  <div class="mo-card">
+    <div class="mo-card-img">
+      <span class="mo-card-brand">Frida Kahlo</span>
+      <span class="mo-card-gender">Mujer</span>
+      <img src="imgs2/mont-fridakahlo-fk1009m-bu-pasi-n-por-la-vida.jpg" alt="Frida Kahlo, Cat-eye oro rosa" loading="lazy" />
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-card-line">Ref. FK1009M-BU · Pasión por la Vida</div>
+      <h3 class="mo-card-title">Cat-eye oro rosa</h3>
+      <p class="mo-card-text">Montura metálica y acetato.</p>
+      <div class="mo-card-size">Talla 53-17-140</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1009M-BU%20-%20Cat-eye%20oro%20rosa" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   </div>
@@ -591,164 +620,190 @@
 <section class="mo-brand-section" id="reaction">
   <div class="mo-brand-head">
     <h2>Kenneth Cole Reaction</h2>
-    <span class="mo-brand-count">12 referencias</span>
+    <span class="mo-brand-count">13 referencias</span>
   </div>
   <div class="mo-grid">
 
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
+      <span class="mo-card-gender">Mujer</span>
+      <img src="imgs2/mont-reaction-rn50006-69.jpg" alt="Kenneth Cole Reaction, Cat-eye rojo vino" loading="lazy" />
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-card-line">Ref. RN50006 · Color 69</div>
+      <h3 class="mo-card-title">Cat-eye rojo vino</h3>
+      <p class="mo-card-text">Montura en acetato.</p>
+      <div class="mo-card-size">Talla 51-19-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20RN50006%20-%20Cat-eye%20rojo%20vino" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+  <div class="mo-card">
+    <div class="mo-card-img">
+      <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-reaction-rectangular-negro.jpg" alt="Kenneth Cole Reaction, Armazón rectangular negro mate" loading="lazy" />
+      <img src="imgs2/mont-reaction-rn50021-2.jpg" alt="Kenneth Cole Reaction, Rectangular negro mate" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Kenneth Cole Reaction</div>
-      <h3 class="mo-card-title">Armazón rectangular negro mate</h3>
-      <p class="mo-card-text">Acetato negro mate de línea clásica masculina, ideal para un uso versátil y de bajo mantenimiento.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20-%20Armaz%C3%B3n%20rectangular%20negro%20mate" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
-    </div>
-  </div>
-  <div class="mo-card">
-    <div class="mo-card-img">
-      <span class="mo-card-brand">Kenneth Cole Reaction</span>
-      <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-reaction-catseye-ambar.jpg" alt="Kenneth Cole Reaction, Cat-eye carey ámbar" loading="lazy" />
-    </div>
-    <div class="mo-card-body">
-      <div class="mo-card-line">Kenneth Cole Reaction</div>
-      <h3 class="mo-card-title">Cat-eye carey ámbar</h3>
-      <p class="mo-card-text">Acetato carey ámbar con vetas doradas y negras, combinado con varilla azul marino brillante.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20-%20Cat-eye%20carey%20%C3%A1mbar" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
-    </div>
-  </div>
-  <div class="mo-card">
-    <div class="mo-card-img">
-      <span class="mo-card-brand">Kenneth Cole Reaction</span>
-      <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-reaction-catseye-vino.jpg" alt="Kenneth Cole Reaction, Cat-eye rojo vino translúcido" loading="lazy" />
-    </div>
-    <div class="mo-card-body">
-      <div class="mo-card-line">Kenneth Cole Reaction</div>
-      <h3 class="mo-card-title">Cat-eye rojo vino translúcido</h3>
-      <p class="mo-card-text">Acetato translúcido rojo vino con varilla jaspeada en rojo y negro. Un tono profundo y sofisticado.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20-%20Cat-eye%20rojo%20vino%20transl%C3%BAcido" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
-    </div>
-  </div>
-  <div class="mo-card">
-    <div class="mo-card-img">
-      <span class="mo-card-brand">Kenneth Cole Reaction</span>
-      <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-reaction-catseye-morado.jpg" alt="Kenneth Cole Reaction, Cat-eye morado ciruela" loading="lazy" />
-    </div>
-    <div class="mo-card-body">
-      <div class="mo-card-line">Kenneth Cole Reaction</div>
-      <h3 class="mo-card-title">Cat-eye morado ciruela</h3>
-      <p class="mo-card-text">Acetato translúcido morado ciruela con varilla a tono y línea negra. Contemporáneo y llamativo.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20-%20Cat-eye%20morado%20ciruela" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. RN50021 · Color 2</div>
+      <h3 class="mo-card-title">Rectangular negro mate</h3>
+      <p class="mo-card-text">Montura en acetato mate.</p>
+      <div class="mo-card-size">Talla 54-16-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20RN50021%20-%20Rectangular%20negro%20mate" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Unisex</span>
-      <img src="imgs2/montura-reaction-cuadrada-transparente.jpg" alt="Kenneth Cole Reaction, Armazón cuadrado transparente" loading="lazy" />
+      <img src="imgs2/mont-reaction-rn50024-26.jpg" alt="Kenneth Cole Reaction, Rectangular transparente" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Kenneth Cole Reaction</div>
-      <h3 class="mo-card-title">Armazón cuadrado transparente</h3>
-      <p class="mo-card-text">Acetato transparente de diseño moderno, con varilla de punta negra. Minimalista y fácil de combinar.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20-%20Armaz%C3%B3n%20cuadrado%20transparente" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
-    </div>
-  </div>
-  <div class="mo-card">
-    <div class="mo-card-img">
-      <span class="mo-card-brand">Kenneth Cole Reaction</span>
-      <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-reaction-rectangular-negro-brillante.jpg" alt="Kenneth Cole Reaction, Rectangular negro con puente ojo de cerradura" loading="lazy" />
-    </div>
-    <div class="mo-card-body">
-      <div class="mo-card-line">Kenneth Cole Reaction</div>
-      <h3 class="mo-card-title">Rectangular negro con puente ojo de cerradura</h3>
-      <p class="mo-card-text">Acetato negro brillante con puente tipo ojo de cerradura. Un clásico con un giro de diseño.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20-%20Rectangular%20negro%20con%20puente%20ojo%20de%20cerradura" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. RN50024 · Color 26</div>
+      <h3 class="mo-card-title">Rectangular transparente</h3>
+      <p class="mo-card-text">Montura en acetato.</p>
+      <div class="mo-card-size">Talla 54-16-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20RN50024%20-%20Rectangular%20transparente" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-reaction-redondeada-negro-dorado.jpg" alt="Kenneth Cole Reaction, Cat-eye redondeado negro y dorado" loading="lazy" />
+      <img src="imgs2/mont-reaction-kc0975-81.jpg" alt="Kenneth Cole Reaction, Cat-eye vino con brazos metálicos" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Kenneth Cole Reaction</div>
-      <h3 class="mo-card-title">Cat-eye redondeado negro y dorado</h3>
-      <p class="mo-card-text">Acetato negro con varilla metálica dorada. Silueta redondeada suave de aire vintage.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20-%20Cat-eye%20redondeado%20negro%20y%20dorado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. KC0975 · Color 81</div>
+      <h3 class="mo-card-title">Cat-eye vino con brazos metálicos</h3>
+      <p class="mo-card-text">Montura en acetato con brazos metálicos.</p>
+      <div class="mo-card-size">Talla 55-15-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20KC0975%20-%20Cat-eye%20vino%20con%20brazos%20met%C3%A1licos" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+  <div class="mo-card">
+    <div class="mo-card-img">
+      <span class="mo-card-brand">Kenneth Cole Reaction</span>
+      <span class="mo-card-gender">Hombre</span>
+      <img src="imgs2/mont-reaction-rn50017-5.jpg" alt="Kenneth Cole Reaction, Cuadrada negra" loading="lazy" />
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-card-line">Ref. RN50017 · Color 5</div>
+      <h3 class="mo-card-title">Cuadrada negra</h3>
+      <p class="mo-card-text">Montura en acetato.</p>
+      <div class="mo-card-size">Talla 56-17-150</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20RN50017%20-%20Cuadrada%20negra" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+  <div class="mo-card">
+    <div class="mo-card-img">
+      <span class="mo-card-brand">Kenneth Cole Reaction</span>
+      <span class="mo-card-gender">Hombre</span>
+      <img src="imgs2/mont-reaction-rn50027-2.jpg" alt="Kenneth Cole Reaction, Rectangular en acero negro" loading="lazy" />
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-card-line">Ref. RN50027 · Color 2</div>
+      <h3 class="mo-card-title">Rectangular en acero negro</h3>
+      <p class="mo-card-text">Montura en acero inoxidable color negro con brazos en acetato.</p>
+      <div class="mo-card-size">Talla 53-18-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20RN50027%20-%20Rectangular%20en%20acero%20negro" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+  <div class="mo-card">
+    <div class="mo-card-img">
+      <span class="mo-card-brand">Kenneth Cole Reaction</span>
+      <span class="mo-card-gender">Mujer</span>
+      <img src="imgs2/mont-reaction-kc0958-32.jpg" alt="Kenneth Cole Reaction, Geométrica en acero dorado" loading="lazy" />
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-card-line">Ref. KC0958 · Color 32</div>
+      <h3 class="mo-card-title">Geométrica en acero dorado</h3>
+      <p class="mo-card-text">Montura en acero inoxidable color dorado con brazos en acetato.</p>
+      <div class="mo-card-size">Talla 55-16-140</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20KC0958%20-%20Geom%C3%A9trica%20en%20acero%20dorado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+  <div class="mo-card">
+    <div class="mo-card-img">
+      <span class="mo-card-brand">Kenneth Cole Reaction</span>
+      <span class="mo-card-gender">Hombre</span>
+      <img src="imgs2/mont-reaction-kc0956-1.jpg" alt="Kenneth Cole Reaction, Redondeada negra y dorada" loading="lazy" />
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-card-line">Ref. KC0956 · Color 1</div>
+      <h3 class="mo-card-title">Redondeada negra y dorada</h3>
+      <p class="mo-card-text">Montura en acetato color negro con brazos metálicos dorados.</p>
+      <div class="mo-card-size">Talla 53-15-140</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20KC0956%20-%20Redondeada%20negra%20y%20dorada" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+  <div class="mo-card">
+    <div class="mo-card-img">
+      <span class="mo-card-brand">Kenneth Cole Reaction</span>
+      <span class="mo-card-gender">Hombre</span>
+      <img src="imgs2/mont-reaction-kc0951-91.jpg" alt="Kenneth Cole Reaction, Rectangular en acero azulado" loading="lazy" />
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-card-line">Ref. KC0951 · Color 91</div>
+      <h3 class="mo-card-title">Rectangular en acero azulado</h3>
+      <p class="mo-card-text">Montura en acero inoxidable color azul.</p>
+      <div class="mo-card-size">Talla 55-16-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20KC0951%20-%20Rectangular%20en%20acero%20azulado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Unisex</span>
-      <img src="imgs2/montura-reaction-rectangular-gris.jpg" alt="Kenneth Cole Reaction, Rectangular gris humo translúcido" loading="lazy" />
+      <img src="imgs2/mont-reaction-kc0933-26.jpg" alt="Kenneth Cole Reaction, Rectangular transparente mate" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Kenneth Cole Reaction</div>
-      <h3 class="mo-card-title">Rectangular gris humo translúcido</h3>
-      <p class="mo-card-text">Acetato gris humo translúcido mate con varilla a rayas. Un tono neutro de gran versatilidad.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20-%20Rectangular%20gris%20humo%20transl%C3%BAcido" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. KC0933 · Color 26</div>
+      <h3 class="mo-card-title">Rectangular transparente mate</h3>
+      <p class="mo-card-text">Montura en acetato mate color transparente.</p>
+      <div class="mo-card-size">Talla 54-16-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20KC0933%20-%20Rectangular%20transparente%20mate" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-reaction-cuadrada-redondeada-negra.jpg" alt="Kenneth Cole Reaction, Cuadrado redondeado negro brillante" loading="lazy" />
+      <img src="imgs2/mont-reaction-rn50025-1.jpg" alt="Kenneth Cole Reaction, Redondeada negra" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Kenneth Cole Reaction</div>
-      <h3 class="mo-card-title">Cuadrado redondeado negro brillante</h3>
-      <p class="mo-card-text">Acetato negro brillante de línea clásica con esquinas suavizadas. Un básico de uso diario.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20-%20Cuadrado%20redondeado%20negro%20brillante" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. RN50025 · Color 1</div>
+      <h3 class="mo-card-title">Redondeada negra</h3>
+      <p class="mo-card-text">Montura en acetato color negro.</p>
+      <div class="mo-card-size">Talla 52-17-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20RN50025%20-%20Redondeada%20negra" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
-      <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-reaction-rectangular-metal-negro.jpg" alt="Kenneth Cole Reaction, Rectangular en metal negro mate" loading="lazy" />
+      <span class="mo-card-gender">Unisex</span>
+      <img src="imgs2/mont-reaction-kc0940-53.jpg" alt="Kenneth Cole Reaction, Carey con brazos azules" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Kenneth Cole Reaction</div>
-      <h3 class="mo-card-title">Rectangular en metal negro mate</h3>
-      <p class="mo-card-text">Acabado en acero inoxidable negro mate con detalle en carey en el nacimiento de la varilla.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20-%20Rectangular%20en%20metal%20negro%20mate" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
-    </div>
-  </div>
-  <div class="mo-card">
-    <div class="mo-card-img">
-      <span class="mo-card-brand">Kenneth Cole Reaction</span>
-      <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-reaction-redondeada-dorada.jpg" alt="Kenneth Cole Reaction, Armazón redondeado en dorado" loading="lazy" />
-    </div>
-    <div class="mo-card-body">
-      <div class="mo-card-line">Kenneth Cole Reaction</div>
-      <h3 class="mo-card-title">Armazón redondeado en dorado</h3>
-      <p class="mo-card-text">Metal dorado fino con puntas de varilla en negro. Un modelo liviano y de acabado precioso.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20-%20Armaz%C3%B3n%20redondeado%20en%20dorado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. KC0940 · Color 53</div>
+      <h3 class="mo-card-title">Carey con brazos azules</h3>
+      <p class="mo-card-text">Montura en acetato con frente carey y brazos azules.</p>
+      <div class="mo-card-size">Talla 54-16-140</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20KC0940%20-%20Carey%20con%20brazos%20azules" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Mujer</span>
-      <img src="imgs2/montura-reaction-catseye-morado-metal.jpg" alt="Kenneth Cole Reaction, Cat-eye morado y gunmetal" loading="lazy" />
+      <img src="imgs2/mont-reaction-kc0974-81.jpg" alt="Kenneth Cole Reaction, Cat-eye metálica gunmetal" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Kenneth Cole Reaction</div>
-      <h3 class="mo-card-title">Cat-eye morado y gunmetal</h3>
-      <p class="mo-card-text">Armazón metálico con mitad superior en morado brillante y mitad inferior en gunmetal plateado.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20-%20Cat-eye%20morado%20y%20gunmetal" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. KC0974 · Color 81</div>
+      <h3 class="mo-card-title">Cat-eye metálica gunmetal</h3>
+      <p class="mo-card-text">Montura metálica.</p>
+      <div class="mo-card-size">Talla 55-17-140</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20KC0974%20-%20Cat-eye%20met%C3%A1lica%20gunmetal" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   </div>
@@ -757,7 +812,7 @@
 <section class="mo-brand-section" id="perryellis">
   <div class="mo-brand-head">
     <h2>Perry Ellis</h2>
-    <span class="mo-brand-count">12 referencias</span>
+    <span class="mo-brand-count">13 referencias</span>
   </div>
   <div class="mo-grid">
 
@@ -765,156 +820,182 @@
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-perryellis-rectangular-azul.jpg" alt="Perry Ellis, Rectangular en acero azul marino" loading="lazy" />
+      <div class="mo-card-noimg">Foto próximamente</div>
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Perry Ellis</div>
-      <h3 class="mo-card-title">Rectangular en acero azul marino</h3>
-      <p class="mo-card-text">Montura metálica en acero inoxidable azul marino con puente doble de diseño geométrico.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20-%20Rectangular%20en%20acero%20azul%20marino" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. PEV42607 · Color C03</div>
+      <h3 class="mo-card-title">Montura en acero y acetato</h3>
+      <p class="mo-card-text">Sofisticada montura en acero inoxidable y acetato italiano.</p>
+      <div class="mo-card-size">Talla 55-16-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV42607%20-%20Montura%20en%20acero%20y%20acetato" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-perryellis-rectangular-titanio.jpg" alt="Perry Ellis, Rectangular en titanio negro" loading="lazy" />
+      <div class="mo-card-noimg">Foto próximamente</div>
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Perry Ellis</div>
-      <h3 class="mo-card-title">Rectangular en titanio negro</h3>
-      <p class="mo-card-text">Montura metálica en titanio negro de líneas finas, estilo ejecutivo y de perfil discreto.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20-%20Rectangular%20en%20titanio%20negro" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. PEV62501 · Color C1</div>
+      <h3 class="mo-card-title">Montura en acero inoxidable</h3>
+      <p class="mo-card-text">Sofisticada montura en acero inoxidable diseñada en Italia.</p>
+      <div class="mo-card-size">Talla 57-17-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV62501%20-%20Montura%20en%20acero%20inoxidable" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-perryellis-alaire-vino.jpg" alt="Perry Ellis, Al aire en café vino" loading="lazy" />
+      <div class="mo-card-noimg">Foto próximamente</div>
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Perry Ellis</div>
-      <h3 class="mo-card-title">Al aire en café vino</h3>
-      <p class="mo-card-text">Montura al aire (rimless) en titanio con puente y varilla en café vino. Ligera y de bajo perfil.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20-%20Al%20aire%20en%20caf%C3%A9%20vino" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. PEV52303 · Color C02</div>
+      <h3 class="mo-card-title">Montura 3 piezas en titanium</h3>
+      <p class="mo-card-text">Sofisticada montura de 3 piezas con diseño italiano en titanium.</p>
+      <div class="mo-card-size">Talla 55-18-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV52303%20-%20Montura%203%20piezas%20en%20titanium" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-perryellis-rectangular-madera.jpg" alt="Perry Ellis, Rectangular negro texturizado" loading="lazy" />
+      <div class="mo-card-noimg">Foto próximamente</div>
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Perry Ellis</div>
-      <h3 class="mo-card-title">Rectangular negro texturizado</h3>
-      <p class="mo-card-text">Acetato negro con textura tipo madera cepillada y bisagra en dorado. Un acabado sofisticado.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20-%20Rectangular%20negro%20texturizado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. PEV52303 · Color C03</div>
+      <h3 class="mo-card-title">Montura 3 piezas en titanium</h3>
+      <p class="mo-card-text">Sofisticada montura de 3 piezas con diseño italiano en titanium.</p>
+      <div class="mo-card-size">Talla 55-18-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV52303%20-%20Montura%203%20piezas%20en%20titanium" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-perryellis-cuadrada-gris.jpg" alt="Perry Ellis, Cuadrado gris humo translúcido" loading="lazy" />
+      <img src="imgs2/mont-perryellis-pev42602-c01.jpg" alt="Perry Ellis, Armazón transparente en acetato" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Perry Ellis</div>
-      <h3 class="mo-card-title">Cuadrado gris humo translúcido</h3>
-      <p class="mo-card-text">Acetato gris humo translúcido con acento metálico plateado en la varilla. Neutro y versátil.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20-%20Cuadrado%20gris%20humo%20transl%C3%BAcido" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. PEV42602 · Color C01</div>
+      <h3 class="mo-card-title">Armazón transparente en acetato</h3>
+      <p class="mo-card-text">Sofisticada montura en acetato italiano.</p>
+      <div class="mo-card-size">Talla 52-21-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV42602%20-%20Armaz%C3%B3n%20transparente%20en%20acetato" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-perryellis-geometrica-dorada.jpg" alt="Perry Ellis, Geométrico en metal dorado" loading="lazy" />
+      <img src="imgs2/mont-perryellis-pev52302-c01.jpg" alt="Perry Ellis, Al aire en titanium negro" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Perry Ellis</div>
-      <h3 class="mo-card-title">Geométrico en metal dorado</h3>
-      <p class="mo-card-text">Metal dorado con varilla de textura perforada negra y puntas en carey. Un diseño de autor.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20-%20Geom%C3%A9trico%20en%20metal%20dorado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
-    </div>
-  </div>
-  <div class="mo-card">
-    <div class="mo-card-img">
-      <span class="mo-card-brand">Perry Ellis</span>
-      <span class="mo-card-gender">Unisex</span>
-      <img src="imgs2/montura-perryellis-geometrica-gunmetal.jpg" alt="Perry Ellis, Geométrico en gunmetal" loading="lazy" />
-    </div>
-    <div class="mo-card-body">
-      <div class="mo-card-line">Perry Ellis</div>
-      <h3 class="mo-card-title">Geométrico en gunmetal</h3>
-      <p class="mo-card-text">Metal gunmetal de líneas finas con aro acanalado. Minimalista, liviano y unisex.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20-%20Geom%C3%A9trico%20en%20gunmetal" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. PEV52302 · Color C01</div>
+      <h3 class="mo-card-title">Al aire en titanium negro</h3>
+      <p class="mo-card-text">Sofisticada montura de 3 piezas con diseño italiano en titanium.</p>
+      <div class="mo-card-size">Talla 55-18-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV52302%20-%20Al%20aire%20en%20titanium%20negro" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-perryellis-rectangular-gris-carey.jpg" alt="Perry Ellis, Rectangular gris con puntas carey" loading="lazy" />
+      <img src="imgs2/mont-perryellis-pev42411-c03.jpg" alt="Perry Ellis, Rectangular gris amaderado" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Perry Ellis</div>
-      <h3 class="mo-card-title">Rectangular gris con puntas carey</h3>
-      <p class="mo-card-text">Acetato gris claro translúcido con puntas de varilla en carey y azul marino. Sobrio y elegante.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20-%20Rectangular%20gris%20con%20puntas%20carey" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
-    </div>
-  </div>
-  <div class="mo-card">
-    <div class="mo-card-img">
-      <span class="mo-card-brand">Perry Ellis</span>
-      <span class="mo-card-gender">Unisex</span>
-      <img src="imgs2/montura-perryellis-alaire-rosado.jpg" alt="Perry Ellis, Al aire con tinte rosado" loading="lazy" />
-    </div>
-    <div class="mo-card-body">
-      <div class="mo-card-line">Perry Ellis</div>
-      <h3 class="mo-card-title">Al aire con tinte rosado</h3>
-      <p class="mo-card-text">Montura al aire (rimless) en titanio con varilla negra y lente demo de leve tinte rosado. Muy liviana.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20-%20Al%20aire%20con%20tinte%20rosado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. PEV42411 · Color C03</div>
+      <h3 class="mo-card-title">Rectangular gris amaderado</h3>
+      <p class="mo-card-text">Sofisticada montura en acetato italiano tipo amaderado.</p>
+      <div class="mo-card-size">Talla 55-17-140</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV42411%20-%20Rectangular%20gris%20amaderado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-perryellis-browline-transparente.jpg" alt="Perry Ellis, Browline transparente" loading="lazy" />
+      <img src="imgs2/mont-perryellis-pev42411-c02.jpg" alt="Perry Ellis, Rectangular negro amaderado" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Perry Ellis</div>
-      <h3 class="mo-card-title">Browline transparente</h3>
-      <p class="mo-card-text">Acetato transparente estilo browline con ceja superior café oscuro y filos dorados. Un ícono retro.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20-%20Browline%20transparente" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. PEV42411 · Color C02</div>
+      <h3 class="mo-card-title">Rectangular negro amaderado</h3>
+      <p class="mo-card-text">Sofisticada montura en acetato italiano tipo amaderado.</p>
+      <div class="mo-card-size">Talla 55-17-140</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV42411%20-%20Rectangular%20negro%20amaderado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-perryellis-rectangular-bronce.jpg" alt="Perry Ellis, Rectangular gunmetal y bronce" loading="lazy" />
+      <img src="imgs2/mont-perryellis-pev42505-c02.jpg" alt="Perry Ellis, Cuadrada en metal quirúrgico" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Perry Ellis</div>
-      <h3 class="mo-card-title">Rectangular gunmetal y bronce</h3>
-      <p class="mo-card-text">Metal en tonos gunmetal y bronce con puntas de varilla negras. Un acabado cálido y metálico.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20-%20Rectangular%20gunmetal%20y%20bronce" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. PEV42505 · Color C02</div>
+      <h3 class="mo-card-title">Cuadrada en metal quirúrgico</h3>
+      <p class="mo-card-text">Sofisticada montura diseñada en Italia en metal quirúrgico.</p>
+      <div class="mo-card-size">Talla 53-18-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV42505%20-%20Cuadrada%20en%20metal%20quir%C3%BArgico" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   <div class="mo-card">
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/montura-perryellis-cuadrada-cristal.jpg" alt="Perry Ellis, Cuadrado transparente cristal" loading="lazy" />
+      <img src="imgs2/mont-perryellis-pev42401-c01.jpg" alt="Perry Ellis, Bicolor con brazos metálicos" loading="lazy" />
     </div>
     <div class="mo-card-body">
-      <div class="mo-card-line">Perry Ellis</div>
-      <h3 class="mo-card-title">Cuadrado transparente cristal</h3>
-      <p class="mo-card-text">Acetato transparente cristal con varilla azul marino y filos dorados. Fresco, limpio y actual.</p>
-      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20-%20Cuadrado%20transparente%20cristal" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+      <div class="mo-card-line">Ref. PEV42401 · Color C01</div>
+      <h3 class="mo-card-title">Bicolor con brazos metálicos</h3>
+      <p class="mo-card-text">Sofisticada montura en acetato italiano con brazos metálicos.</p>
+      <div class="mo-card-size">Talla 55-17-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV42401%20-%20Bicolor%20con%20brazos%20met%C3%A1licos" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+  <div class="mo-card">
+    <div class="mo-card-img">
+      <span class="mo-card-brand">Perry Ellis</span>
+      <span class="mo-card-gender">Hombre</span>
+      <img src="imgs2/mont-perryellis-pev42501-c02.jpg" alt="Perry Ellis, Rectangular oscura" loading="lazy" />
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-card-line">Ref. PEV42501 · Color C02</div>
+      <h3 class="mo-card-title">Rectangular oscura</h3>
+      <p class="mo-card-text">Sofisticada montura en acetato italiano en color gris oscuro.</p>
+      <div class="mo-card-size">Talla 56-19-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV42501%20-%20Rectangular%20oscura" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+  <div class="mo-card">
+    <div class="mo-card-img">
+      <span class="mo-card-brand">Perry Ellis</span>
+      <span class="mo-card-gender">Hombre</span>
+      <img src="imgs2/mont-perryellis-pev42608-c03.jpg" alt="Perry Ellis, Geométrica en dorado" loading="lazy" />
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-card-line">Ref. PEV42608 · Color C03</div>
+      <h3 class="mo-card-title">Geométrica en dorado</h3>
+      <p class="mo-card-text">Sofisticada montura metálica diseñada en Italia en color dorado.</p>
+      <div class="mo-card-size">Talla 54-17-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV42608%20-%20Geom%C3%A9trica%20en%20dorado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+  <div class="mo-card">
+    <div class="mo-card-img">
+      <span class="mo-card-brand">Perry Ellis</span>
+      <span class="mo-card-gender">Hombre</span>
+      <img src="imgs2/mont-perryellis-pev52405-c01.jpg" alt="Perry Ellis, Rectangular en titanium negro" loading="lazy" />
+    </div>
+    <div class="mo-card-body">
+      <div class="mo-card-line">Ref. PEV52405 · Color C01</div>
+      <h3 class="mo-card-title">Rectangular en titanium negro</h3>
+      <p class="mo-card-text">Sofisticada montura diseñada en Italia en titanium.</p>
+      <div class="mo-card-size">Talla 57-15-145</div>
+      <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV52405%20-%20Rectangular%20en%20titanium%20negro" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
   </div>
