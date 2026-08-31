@@ -261,7 +261,23 @@ function enviarCitaWA(e) {
     `🔍 Servicio: ${servicio}\n` +
     (mensaje ? `💬 Mensaje: ${mensaje}` : '');
 
-  const url = `https://wa.me/573024628165?text=${encodeURIComponent(texto)}`;
+  const url = `https://wa.me/573217587259?text=${encodeURIComponent(texto)}`;
+  window.open(url, '_blank');
+  f.reset();
+}
+
+function enviarEmpresaWA(e) {
+  e.preventDefault();
+  const f = e.target;
+  const empresa = f.empresa.value.trim();
+  const correo  = f.correo.value.trim();
+
+  const texto =
+    `Hola MENVI, quiero información sobre el programa empresarial 🏢👓\n\n` +
+    `🏢 Empresa: ${empresa}\n` +
+    `📧 Correo: ${correo}`;
+
+  const url = `https://wa.me/573217587259?text=${encodeURIComponent(texto)}`;
   window.open(url, '_blank');
   f.reset();
 }
