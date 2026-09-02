@@ -2056,6 +2056,9 @@ h3, h4, h5 {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }
 .gal-item.wide {
   grid-column: span 2;

@@ -233,6 +233,87 @@
     .gs-grid { grid-template-columns: 1fr; gap: 18px; padding: 0 18px 48px; }
     .gs-card-body { padding: 20px 20px 24px; }
   }
+
+  .gs-card { cursor: pointer; }
+
+  /* LIGHTBOX */
+  .gs-lightbox {
+    position: fixed; inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .gs-lightbox.open { display: flex; }
+  .gs-lightbox-overlay {
+    position: absolute; inset: 0;
+    background: rgba(10,10,10,.9);
+  }
+  .gs-lightbox-content {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    max-width: 1000px;
+    width: 100%;
+    max-height: 90vh;
+    display: flex;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  .gs-lightbox-imgwrap {
+    flex: 1 1 58%;
+    background: #fafafa;
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+    min-height: 320px;
+  }
+  .gs-lightbox-imgwrap img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    transition: transform .25s ease;
+    transform-origin: center center;
+  }
+  .gs-lightbox-imgwrap.zoomed { cursor: zoom-out; }
+  .gs-lightbox-imgwrap.zoomed img { transform: scale(2.2); }
+  .gs-lightbox-info {
+    flex: 1 1 42%;
+    padding: 40px 36px;
+    overflow-y: auto;
+  }
+  .gs-lightbox-info .gs-card-brand { position: static; display: inline-block; margin: 0 0 16px; }
+  .gs-lightbox-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    z-index: 2;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,.9);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .gs-lightbox-zoomhint {
+    position: absolute;
+    bottom: 14px; left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #999;
+    background: rgba(255,255,255,.85);
+    padding: 6px 14px;
+    border-radius: 999px;
+    pointer-events: none;
+  }
+  @media (max-width: 760px) {
+    .gs-lightbox-content { flex-direction: column; max-height: 92vh; overflow-y: auto; }
+    .gs-lightbox-imgwrap { min-height: 260px; }
+  }
 </style>
 </head>
 <body class="gs-page">
@@ -579,6 +660,26 @@
   <span class="wa-float-tooltip">Consultar por WhatsApp</span>
 </a>
 
+<!-- LIGHTBOX -->
+<div class="gs-lightbox" id="gsLightbox" aria-hidden="true">
+  <div class="gs-lightbox-overlay" data-gs-close></div>
+  <div class="gs-lightbox-content">
+    <button type="button" class="gs-lightbox-close" data-gs-close aria-label="Cerrar">&times;</button>
+    <div class="gs-lightbox-imgwrap" id="gsLightboxImgWrap">
+      <img id="gsLightboxImg" src="" alt="" />
+      <span class="gs-lightbox-zoomhint">Clic para ampliar</span>
+    </div>
+    <div class="gs-lightbox-info">
+      <span class="gs-card-brand" id="gsLightboxBrand"></span>
+      <div class="gs-card-line" id="gsLightboxLine" style="margin-top:16px;"></div>
+      <h3 class="gs-card-title" id="gsLightboxTitle"></h3>
+      <p class="gs-card-text" id="gsLightboxText"></p>
+      <div class="gs-card-price" id="gsLightboxPrice"></div>
+      <a href="#" class="gs-card-cta" id="gsLightboxCta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+</div>
+
 <script src="script.js"></script>
 <script>
   (function () {
@@ -609,6 +710,66 @@
     });
 
     applyFilter('nike');
+  })();
+</script>
+<script>
+  (function () {
+    var lightbox = document.getElementById('gsLightbox');
+    var imgWrap = document.getElementById('gsLightboxImgWrap');
+    var img = document.getElementById('gsLightboxImg');
+
+    function openLightbox(card) {
+      var srcImg = card.querySelector('.gs-card-img img');
+      if (!srcImg) return;
+      img.src = srcImg.src;
+      img.alt = srcImg.alt;
+      document.getElementById('gsLightboxBrand').textContent = card.querySelector('.gs-card-brand').textContent;
+      document.getElementById('gsLightboxLine').textContent = card.querySelector('.gs-card-line').textContent;
+      document.getElementById('gsLightboxTitle').textContent = card.querySelector('.gs-card-title').textContent;
+      document.getElementById('gsLightboxText').textContent = card.querySelector('.gs-card-text').textContent;
+      document.getElementById('gsLightboxPrice').innerHTML = card.querySelector('.gs-card-price').innerHTML;
+      document.getElementById('gsLightboxCta').href = card.querySelector('.gs-card-cta').href;
+      imgWrap.classList.remove('zoomed');
+      img.style.transformOrigin = 'center center';
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      imgWrap.classList.remove('zoomed');
+    }
+
+    document.querySelectorAll('#gsGrid .gs-card').forEach(function (card) {
+      card.addEventListener('click', function (e) {
+        if (e.target.closest('.gs-card-cta')) return;
+        openLightbox(card);
+      });
+    });
+
+    document.querySelectorAll('[data-gs-close]').forEach(function (el) {
+      el.addEventListener('click', closeLightbox);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    imgWrap.addEventListener('click', function (e) {
+      if (imgWrap.classList.contains('zoomed')) {
+        imgWrap.classList.remove('zoomed');
+        img.style.transformOrigin = 'center center';
+      } else {
+        var rect = imgWrap.getBoundingClientRect();
+        var xPct = ((e.clientX - rect.left) / rect.width) * 100;
+        var yPct = ((e.clientY - rect.top) / rect.height) * 100;
+        img.style.transformOrigin = xPct + '% ' + yPct + '%';
+        imgWrap.classList.add('zoomed');
+      }
+    });
   })();
 </script>
 </body>

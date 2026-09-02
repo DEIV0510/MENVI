@@ -279,6 +279,88 @@
     .mo-brand-section { padding: 0 18px 8px; }
     .mo-card-body { padding: 20px 20px 24px; }
   }
+
+  .mo-card { cursor: pointer; }
+
+  /* LIGHTBOX */
+  .mo-lightbox {
+    position: fixed; inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .mo-lightbox.open { display: flex; }
+  .mo-lightbox-overlay {
+    position: absolute; inset: 0;
+    background: rgba(10,10,10,.9);
+  }
+  .mo-lightbox-content {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    max-width: 1000px;
+    width: 100%;
+    max-height: 90vh;
+    display: flex;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  .mo-lightbox-imgwrap {
+    flex: 1 1 58%;
+    background: #fafafa;
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+    min-height: 320px;
+  }
+  .mo-lightbox-imgwrap img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    transition: transform .25s ease;
+    transform-origin: center center;
+  }
+  .mo-lightbox-imgwrap.zoomed { cursor: zoom-out; }
+  .mo-lightbox-imgwrap.zoomed img { transform: scale(2.2); }
+  .mo-lightbox-info {
+    flex: 1 1 42%;
+    padding: 40px 36px;
+    overflow-y: auto;
+  }
+  .mo-lightbox-info .mo-card-brand,
+  .mo-lightbox-info .mo-card-gender { position: static; display: inline-block; margin: 0 8px 16px 0; }
+  .mo-lightbox-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    z-index: 2;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,.9);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .mo-lightbox-zoomhint {
+    position: absolute;
+    bottom: 14px; left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #999;
+    background: rgba(255,255,255,.85);
+    padding: 6px 14px;
+    border-radius: 999px;
+    pointer-events: none;
+  }
+  @media (max-width: 760px) {
+    .mo-lightbox-content { flex-direction: column; max-height: 92vh; overflow-y: auto; }
+    .mo-lightbox-imgwrap { min-height: 260px; }
+  }
 </style>
 </head>
 <body class="mo-page">
@@ -1139,6 +1221,28 @@
   <span class="wa-float-tooltip">Consultar por WhatsApp</span>
 </a>
 
+<!-- LIGHTBOX -->
+<div class="mo-lightbox" id="moLightbox" aria-hidden="true">
+  <div class="mo-lightbox-overlay" data-mo-close></div>
+  <div class="mo-lightbox-content">
+    <button type="button" class="mo-lightbox-close" data-mo-close aria-label="Cerrar">&times;</button>
+    <div class="mo-lightbox-imgwrap" id="moLightboxImgWrap">
+      <img id="moLightboxImg" src="" alt="" />
+      <span class="mo-lightbox-zoomhint">Clic para ampliar</span>
+    </div>
+    <div class="mo-lightbox-info">
+      <span class="mo-card-brand" id="moLightboxBrand" style="position:static;"></span>
+      <span class="mo-card-gender" id="moLightboxGender" style="position:static;"></span>
+      <div class="mo-card-line" id="moLightboxLine" style="margin-top:16px;"></div>
+      <h3 class="mo-card-title" id="moLightboxTitle"></h3>
+      <p class="mo-card-text" id="moLightboxText"></p>
+      <div class="mo-card-size" id="moLightboxSize"></div>
+      <div class="mo-card-price" id="moLightboxPrice"></div>
+      <a href="#" class="mo-card-cta" id="moLightboxCta" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+</div>
+
 <script src="script.js"></script>
 <script>
   (function () {
@@ -1164,6 +1268,68 @@
     });
 
     applyFilter('reebok');
+  })();
+</script>
+<script>
+  (function () {
+    var lightbox = document.getElementById('moLightbox');
+    var imgWrap = document.getElementById('moLightboxImgWrap');
+    var img = document.getElementById('moLightboxImg');
+
+    function openLightbox(card) {
+      var srcImg = card.querySelector('.mo-card-img img');
+      if (!srcImg) return;
+      img.src = srcImg.src;
+      img.alt = srcImg.alt;
+      document.getElementById('moLightboxBrand').textContent = card.querySelector('.mo-card-brand').textContent;
+      document.getElementById('moLightboxGender').textContent = card.querySelector('.mo-card-gender').textContent;
+      document.getElementById('moLightboxLine').textContent = card.querySelector('.mo-card-line').textContent;
+      document.getElementById('moLightboxTitle').textContent = card.querySelector('.mo-card-title').textContent;
+      document.getElementById('moLightboxText').textContent = card.querySelector('.mo-card-text').textContent;
+      document.getElementById('moLightboxSize').textContent = card.querySelector('.mo-card-size').textContent;
+      document.getElementById('moLightboxPrice').innerHTML = card.querySelector('.mo-card-price').innerHTML;
+      document.getElementById('moLightboxCta').href = card.querySelector('.mo-card-cta').href;
+      imgWrap.classList.remove('zoomed');
+      img.style.transformOrigin = 'center center';
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      imgWrap.classList.remove('zoomed');
+    }
+
+    document.querySelectorAll('.mo-card').forEach(function (card) {
+      card.addEventListener('click', function (e) {
+        if (e.target.closest('.mo-card-cta')) return;
+        openLightbox(card);
+      });
+    });
+
+    document.querySelectorAll('[data-mo-close]').forEach(function (el) {
+      el.addEventListener('click', closeLightbox);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    imgWrap.addEventListener('click', function (e) {
+      if (imgWrap.classList.contains('zoomed')) {
+        imgWrap.classList.remove('zoomed');
+        img.style.transformOrigin = 'center center';
+      } else {
+        var rect = imgWrap.getBoundingClientRect();
+        var xPct = ((e.clientX - rect.left) / rect.width) * 100;
+        var yPct = ((e.clientY - rect.top) / rect.height) * 100;
+        img.style.transformOrigin = xPct + '% ' + yPct + '%';
+        imgWrap.classList.add('zoomed');
+      }
+    });
   })();
 </script>
 </body>
