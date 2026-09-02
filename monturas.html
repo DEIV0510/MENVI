@@ -159,6 +159,19 @@
     text-transform: uppercase;
     color: #fff;
   }
+  .mo-card-angles {
+    position: absolute;
+    bottom: 14px; right: 14px;
+    padding: 4px 10px;
+    background: rgba(17,17,17,.75);
+    border-radius: 999px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #fff;
+  }
   .mo-card-body { padding: 22px 24px 26px; }
   .mo-card-line {
     font-family: 'Montserrat', sans-serif;
@@ -312,17 +325,47 @@
     background: #fafafa;
     position: relative;
     overflow: hidden;
-    cursor: zoom-in;
+    display: flex;
+    flex-direction: column;
     min-height: 320px;
   }
-  .mo-lightbox-imgwrap img {
+  .mo-lightbox-mainimg {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+  }
+  .mo-lightbox-mainimg img {
     width: 100%; height: 100%;
     object-fit: contain;
     transition: transform .25s ease;
     transform-origin: center center;
   }
-  .mo-lightbox-imgwrap.zoomed { cursor: zoom-out; }
-  .mo-lightbox-imgwrap.zoomed img { transform: scale(2.2); }
+  .mo-lightbox-mainimg.zoomed { cursor: zoom-out; }
+  .mo-lightbox-mainimg.zoomed img { transform: scale(2.2); }
+  .mo-lightbox-thumbs {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    overflow-x: auto;
+  }
+  .mo-lightbox-thumbs button {
+    flex: 0 0 auto;
+    width: 56px; height: 56px;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #fafafa;
+  }
+  .mo-lightbox-thumbs button.active { border-color: #111; }
+  .mo-lightbox-thumbs img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+  }
   .mo-lightbox-info {
     flex: 1 1 42%;
     padding: 40px 36px;
@@ -405,11 +448,12 @@
   </div>
   <div class="mo-grid">
 
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reebok-rbk1039-677.jpg&quot;,&quot;mont-reebok-rbk1039-677-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-reebok-rbk1039-677.jpg" alt="Reebok, Redonda azul marino" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. RBK1039 · Color 677</div>
@@ -420,11 +464,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK1039%20-%20Redonda%20azul%20marino" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reebok-rbk1035-275.jpg&quot;,&quot;mont-reebok-rbk1035-275-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-reebok-rbk1035-275.jpg" alt="Reebok, Redonda rosa translúcida" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. RBK1035 · Color 275</div>
@@ -435,11 +480,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK1035%20-%20Redonda%20rosa%20transl%C3%BAcida" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reebok-rbk3020-4.jpg&quot;,&quot;mont-reebok-rbk3020-4-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Unisex</span>
       <img src="imgs2/mont-reebok-rbk3020-4.jpg" alt="Reebok, Metálica con puntas amarillas" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. RBK3020 · Color 4</div>
@@ -450,11 +496,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK3020%20-%20Met%C3%A1lica%20con%20puntas%20amarillas" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reebok-rbk1035-994.jpg&quot;,&quot;mont-reebok-rbk1035-994-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Unisex</span>
       <img src="imgs2/mont-reebok-rbk1035-994.jpg" alt="Reebok, Redonda gris translúcida" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. RBK1035 · Color 994</div>
@@ -465,11 +512,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK1035%20-%20Redonda%20gris%20transl%C3%BAcida" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reebok-rbk1013-916.jpg&quot;,&quot;mont-reebok-rbk1013-916-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-reebok-rbk1013-916.jpg" alt="Reebok, Rectangular jaspeada" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. RBK1013 · Color 916</div>
@@ -480,11 +528,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK1013%20-%20Rectangular%20jaspeada" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reebok-rbk3019-600.jpg&quot;,&quot;mont-reebok-rbk3019-600-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-reebok-rbk3019-600.jpg" alt="Reebok, Rectangular metálica plateada" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. RBK3019 · Color 600</div>
@@ -495,11 +544,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK3019%20-%20Rectangular%20met%C3%A1lica%20plateada" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reebok-rbk1027-500.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-reebok-rbk1027-500.jpg" alt="Reebok, Rectangular verde botella" loading="lazy" style="object-fit: contain; object-position: center; background: #fafafa;" />
+      
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. RBK1027 · Color 500</div>
@@ -510,11 +560,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK1027%20-%20Rectangular%20verde%20botella" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reebok-rbk1009-2.jpg&quot;,&quot;mont-reebok-rbk1009-2-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-reebok-rbk1009-2.jpg" alt="Reebok, Redonda negra" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. RBK1009 · Color 2</div>
@@ -525,11 +576,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK1009%20-%20Redonda%20negra" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reebok-rbk1038-402.jpg&quot;,&quot;mont-reebok-rbk1038-402-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-reebok-rbk1038-402.jpg" alt="Reebok, Metálica con detalle carey" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. RBK1038 · Color 402</div>
@@ -540,11 +592,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Reebok%20RBK1038%20-%20Met%C3%A1lica%20con%20detalle%20carey" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reebok-rbk1027-1.jpg&quot;,&quot;mont-reebok-rbk1027-1-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Reebok</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-reebok-rbk1027-1.jpg" alt="Reebok, Rectangular negra" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. RBK1027 · Color 1</div>
@@ -565,11 +618,12 @@
   </div>
   <div class="mo-grid">
 
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-fridakahlo-fk1020m-pi-autorretratos.jpg&quot;,&quot;mont-fridakahlo-fk1020m-pi-autorretratos-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-fridakahlo-fk1020m-pi-autorretratos.jpg" alt="Frida Kahlo, Cat-eye dorado y rosa" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. FK1020M-PI · Autorretratos</div>
@@ -580,11 +634,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1020M-PI%20-%20Cat-eye%20dorado%20y%20rosa" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-fridakahlo-fk1028a-f-ra-ces.jpg&quot;,&quot;mont-fridakahlo-fk1028a-f-ra-ces-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-fridakahlo-fk1028a-f-ra-ces.jpg" alt="Frida Kahlo, Cat-eye vino jaspeado" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. FK1028A-F · Raíces</div>
@@ -595,11 +650,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1028A-F%20-%20Cat-eye%20vino%20jaspeado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-fridakahlo-fk1021a-bu-autorretratos.jpg&quot;,&quot;mont-fridakahlo-fk1021a-bu-autorretratos-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-fridakahlo-fk1021a-bu-autorretratos.jpg" alt="Frida Kahlo, Cat-eye rojo vino" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. FK1021A-BU · Autorretratos</div>
@@ -610,11 +666,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1021A-BU%20-%20Cat-eye%20rojo%20vino" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-fridakahlo-fk1011m-bl-pasi-n-por-la-vida.jpg&quot;,&quot;mont-fridakahlo-fk1011m-bl-pasi-n-por-la-vida-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-fridakahlo-fk1011m-bl-pasi-n-por-la-vida.jpg" alt="Frida Kahlo, Cat-eye negro y dorado" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. FK1011M-BL · Pasión por la Vida</div>
@@ -625,11 +682,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1011M-BL%20-%20Cat-eye%20negro%20y%20dorado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-fridakahlo-fk1021a-bl-autorretratos.jpg&quot;,&quot;mont-fridakahlo-fk1021a-bl-autorretratos-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-fridakahlo-fk1021a-bl-autorretratos.jpg" alt="Frida Kahlo, Cat-eye negro" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. FK1021A-BL · Autorretratos</div>
@@ -640,11 +698,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1021A-BL%20-%20Cat-eye%20negro" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-fridakahlo-fk1003a-pi-pasi-n-por-la-vida.jpg&quot;,&quot;mont-fridakahlo-fk1003a-pi-pasi-n-por-la-vida-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-fridakahlo-fk1003a-pi-pasi-n-por-la-vida.jpg" alt="Frida Kahlo, Cat-eye rosa con brazos dorados" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. FK1003A-PI · Pasión por la Vida</div>
@@ -655,11 +714,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1003A-PI%20-%20Cat-eye%20rosa%20con%20brazos%20dorados" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-fridakahlo-fk1030m-bl-ra-ces.jpg&quot;,&quot;mont-fridakahlo-fk1030m-bl-ra-ces-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-fridakahlo-fk1030m-bl-ra-ces.jpg" alt="Frida Kahlo, Metálica negra con filigrana" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. FK1030M-BL · Raíces</div>
@@ -670,11 +730,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1030M-BL%20-%20Met%C3%A1lica%20negra%20con%20filigrana" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-fridakahlo-fk1017a-po-autorretratos.jpg&quot;,&quot;mont-fridakahlo-fk1017a-po-autorretratos-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-fridakahlo-fk1017a-po-autorretratos.jpg" alt="Frida Kahlo, Cat-eye oversize nude" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. FK1017A-PO · Autorretratos</div>
@@ -685,11 +746,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1017A-PO%20-%20Cat-eye%20oversize%20nude" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-fridakahlo-fk1030m-pi-ra-ces.jpg&quot;,&quot;mont-fridakahlo-fk1030m-pi-ra-ces-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-fridakahlo-fk1030m-pi-ra-ces.jpg" alt="Frida Kahlo, Metálica oro rosa con filigrana" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. FK1030M-PI · Raíces</div>
@@ -700,11 +762,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1030M-PI%20-%20Met%C3%A1lica%20oro%20rosa%20con%20filigrana" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-fridakahlo-fk1035a-ro-ra-ces.jpg&quot;,&quot;mont-fridakahlo-fk1035a-ro-ra-ces-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-fridakahlo-fk1035a-ro-ra-ces.jpg" alt="Frida Kahlo, Cat-eye carey miel" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. FK1035A-RO · Raíces</div>
@@ -715,11 +778,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1035A-RO%20-%20Cat-eye%20carey%20miel" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-fridakahlo-fk1007m-bl-pasi-n-por-la-vida.jpg&quot;,&quot;mont-fridakahlo-fk1007m-bl-pasi-n-por-la-vida-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-fridakahlo-fk1007m-bl-pasi-n-por-la-vida.jpg" alt="Frida Kahlo, Cat-eye negro y dorado" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. FK1007M-BL · Pasión por la Vida</div>
@@ -730,11 +794,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Frida%20Kahlo%20FK1007M-BL%20-%20Cat-eye%20negro%20y%20dorado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-fridakahlo-fk1009m-bu-pasi-n-por-la-vida.jpg&quot;,&quot;mont-fridakahlo-fk1009m-bu-pasi-n-por-la-vida-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Frida Kahlo</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-fridakahlo-fk1009m-bu-pasi-n-por-la-vida.jpg" alt="Frida Kahlo, Cat-eye oro rosa" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. FK1009M-BU · Pasión por la Vida</div>
@@ -755,11 +820,12 @@
   </div>
   <div class="mo-grid">
 
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reaction-rn50006-69.jpg&quot;,&quot;mont-reaction-rn50006-69-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-reaction-rn50006-69.jpg" alt="Kenneth Cole Reaction, Cat-eye rojo vino" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. RN50006 · Color 69</div>
@@ -770,11 +836,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20RN50006%20-%20Cat-eye%20rojo%20vino" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reaction-rn50021-2.jpg&quot;,&quot;mont-reaction-rn50021-2-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-reaction-rn50021-2.jpg" alt="Kenneth Cole Reaction, Rectangular negro mate" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. RN50021 · Color 2</div>
@@ -785,11 +852,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20RN50021%20-%20Rectangular%20negro%20mate" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reaction-rn50024-26.jpg&quot;,&quot;mont-reaction-rn50024-26-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Unisex</span>
       <img src="imgs2/mont-reaction-rn50024-26.jpg" alt="Kenneth Cole Reaction, Rectangular transparente" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. RN50024 · Color 26</div>
@@ -800,11 +868,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20RN50024%20-%20Rectangular%20transparente" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reaction-kc0975-81.jpg&quot;,&quot;mont-reaction-kc0975-81-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-reaction-kc0975-81.jpg" alt="Kenneth Cole Reaction, Cat-eye vino con brazos metálicos" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. KC0975 · Color 81</div>
@@ -815,11 +884,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20KC0975%20-%20Cat-eye%20vino%20con%20brazos%20met%C3%A1licos" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reaction-rn50017-5.jpg&quot;,&quot;mont-reaction-rn50017-5-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-reaction-rn50017-5.jpg" alt="Kenneth Cole Reaction, Cuadrada negra" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. RN50017 · Color 5</div>
@@ -830,11 +900,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20RN50017%20-%20Cuadrada%20negra" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reaction-rn50027-2.jpg&quot;,&quot;mont-reaction-rn50027-2-2.jpg&quot;,&quot;mont-reaction-rn50027-2-3.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-reaction-rn50027-2.jpg" alt="Kenneth Cole Reaction, Rectangular en acero negro" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">3 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. RN50027 · Color 2</div>
@@ -845,11 +916,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20RN50027%20-%20Rectangular%20en%20acero%20negro" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reaction-kc0958-32.jpg&quot;,&quot;mont-reaction-kc0958-32-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-reaction-kc0958-32.jpg" alt="Kenneth Cole Reaction, Geométrica en acero dorado" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. KC0958 · Color 32</div>
@@ -860,11 +932,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20KC0958%20-%20Geom%C3%A9trica%20en%20acero%20dorado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reaction-kc0956-1.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-reaction-kc0956-1.jpg" alt="Kenneth Cole Reaction, Redondeada negra y dorada" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. KC0956 · Color 1</div>
@@ -875,11 +948,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20KC0956%20-%20Redondeada%20negra%20y%20dorada" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reaction-kc0951-91.jpg&quot;,&quot;mont-reaction-kc0951-91-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-reaction-kc0951-91.jpg" alt="Kenneth Cole Reaction, Rectangular en acero azulado" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. KC0951 · Color 91</div>
@@ -890,11 +964,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20KC0951%20-%20Rectangular%20en%20acero%20azulado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reaction-kc0933-26.jpg&quot;,&quot;mont-reaction-kc0933-26-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Unisex</span>
       <img src="imgs2/mont-reaction-kc0933-26.jpg" alt="Kenneth Cole Reaction, Rectangular transparente mate" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. KC0933 · Color 26</div>
@@ -905,11 +980,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20KC0933%20-%20Rectangular%20transparente%20mate" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reaction-rn50025-1.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-reaction-rn50025-1.jpg" alt="Kenneth Cole Reaction, Redondeada negra" loading="lazy" style="object-fit: contain; object-position: center; background: #fafafa;" />
+      
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. RN50025 · Color 1</div>
@@ -920,11 +996,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20RN50025%20-%20Redondeada%20negra" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reaction-kc0940-53.jpg&quot;,&quot;mont-reaction-kc0940-53-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Unisex</span>
       <img src="imgs2/mont-reaction-kc0940-53.jpg" alt="Kenneth Cole Reaction, Carey con brazos azules" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. KC0940 · Color 53</div>
@@ -935,11 +1012,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Kenneth%20Cole%20Reaction%20KC0940%20-%20Carey%20con%20brazos%20azules" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-reaction-kc0974-81.jpg&quot;,&quot;mont-reaction-kc0974-81-2.jpg&quot;,&quot;mont-reaction-kc0974-81-3.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Kenneth Cole Reaction</span>
       <span class="mo-card-gender">Mujer</span>
       <img src="imgs2/mont-reaction-kc0974-81.jpg" alt="Kenneth Cole Reaction, Cat-eye metálica gunmetal" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">3 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. KC0974 · Color 81</div>
@@ -960,11 +1038,12 @@
   </div>
   <div class="mo-grid">
 
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-perryellis-pev42607-c03.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-perryellis-pev42607-c03.jpg" alt="Perry Ellis, Montura en acero y acetato" loading="lazy" style="object-fit: contain; object-position: center; background: #fafafa;" />
+      
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. PEV42607 · Color C03</div>
@@ -975,11 +1054,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV42607%20-%20Montura%20en%20acero%20y%20acetato" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-perryellis-pev62501-c1.jpg&quot;,&quot;mont-perryellis-pev62501-c1-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-perryellis-pev62501-c1.jpg" alt="Perry Ellis, Montura en acero inoxidable" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. PEV62501 · Color C1</div>
@@ -990,11 +1070,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV62501%20-%20Montura%20en%20acero%20inoxidable" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-perryellis-pev52303-c02.jpg&quot;,&quot;mont-perryellis-pev52303-c02-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-perryellis-pev52303-c02.jpg" alt="Perry Ellis, Montura 3 piezas en titanium" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. PEV52303 · Color C02</div>
@@ -1005,11 +1086,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV52303%20-%20Montura%203%20piezas%20en%20titanium" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-perryellis-pev52303-c03.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
-      <img src="imgs2/mont-perryellis-pev52303-c03.jpg" alt="Perry Ellis, Montura 3 piezas en titanium" loading="lazy" style="object-fit: contain; object-position: center; background: #fafafa;" />
+      <img src="imgs2/mont-perryellis-pev52303-c03.jpg" alt="Perry Ellis, Montura 3 piezas en titanium" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. PEV52303 · Color C03</div>
@@ -1020,11 +1102,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV52303%20-%20Montura%203%20piezas%20en%20titanium" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-perryellis-pev42602-c01.jpg&quot;,&quot;mont-perryellis-pev42602-c01-2.jpg&quot;,&quot;mont-perryellis-pev42602-c01-3.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-perryellis-pev42602-c01.jpg" alt="Perry Ellis, Armazón transparente en acetato" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">3 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. PEV42602 · Color C01</div>
@@ -1035,11 +1118,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV42602%20-%20Armaz%C3%B3n%20transparente%20en%20acetato" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-perryellis-pev52302-c01.jpg&quot;,&quot;mont-perryellis-pev52302-c01-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-perryellis-pev52302-c01.jpg" alt="Perry Ellis, Al aire en titanium negro" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. PEV52302 · Color C01</div>
@@ -1050,11 +1134,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV52302%20-%20Al%20aire%20en%20titanium%20negro" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-perryellis-pev42411-c03.jpg&quot;,&quot;mont-perryellis-pev42411-c03-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-perryellis-pev42411-c03.jpg" alt="Perry Ellis, Rectangular gris amaderado" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. PEV42411 · Color C03</div>
@@ -1065,11 +1150,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV42411%20-%20Rectangular%20gris%20amaderado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-perryellis-pev42411-c02.jpg&quot;,&quot;mont-perryellis-pev42411-c02-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-perryellis-pev42411-c02.jpg" alt="Perry Ellis, Rectangular negro amaderado" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. PEV42411 · Color C02</div>
@@ -1080,11 +1166,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV42411%20-%20Rectangular%20negro%20amaderado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-perryellis-pev42505-c02.jpg&quot;,&quot;mont-perryellis-pev42505-c02-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-perryellis-pev42505-c02.jpg" alt="Perry Ellis, Cuadrada en metal quirúrgico" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. PEV42505 · Color C02</div>
@@ -1095,11 +1182,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV42505%20-%20Cuadrada%20en%20metal%20quir%C3%BArgico" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-perryellis-pev42401-c01.jpg&quot;,&quot;mont-perryellis-pev42401-c01-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-perryellis-pev42401-c01.jpg" alt="Perry Ellis, Bicolor con brazos metálicos" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. PEV42401 · Color C01</div>
@@ -1110,11 +1198,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV42401%20-%20Bicolor%20con%20brazos%20met%C3%A1licos" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-perryellis-pev42501-c02.jpg&quot;,&quot;mont-perryellis-pev42501-c02-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-perryellis-pev42501-c02.jpg" alt="Perry Ellis, Rectangular oscura" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. PEV42501 · Color C02</div>
@@ -1125,11 +1214,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV42501%20-%20Rectangular%20oscura" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-perryellis-pev42608-c03.jpg&quot;,&quot;mont-perryellis-pev42608-c03-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-perryellis-pev42608-c03.jpg" alt="Perry Ellis, Geométrica en dorado" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. PEV42608 · Color C03</div>
@@ -1140,11 +1230,12 @@
       <a href="https://wa.me/573217587259?text=Hola%20MENVI%2C%20quiero%20consultar%20disponibilidad%20de%20la%20montura%20Perry%20Ellis%20PEV42608%20-%20Geom%C3%A9trica%20en%20dorado" class="mo-card-cta" target="_blank" rel="noopener">Consultar disponibilidad</a>
     </div>
   </div>
-  <div class="mo-card">
+  <div class="mo-card" data-gallery='[&quot;mont-perryellis-pev52405-c01.jpg&quot;,&quot;mont-perryellis-pev52405-c01-2.jpg&quot;]'>
     <div class="mo-card-img">
       <span class="mo-card-brand">Perry Ellis</span>
       <span class="mo-card-gender">Hombre</span>
       <img src="imgs2/mont-perryellis-pev52405-c01.jpg" alt="Perry Ellis, Rectangular en titanium negro" loading="lazy" style="object-fit: cover; object-position: center 82%;" />
+      <span class="mo-card-angles">2 fotos</span>
     </div>
     <div class="mo-card-body">
       <div class="mo-card-line">Ref. PEV52405 · Color C01</div>
@@ -1226,9 +1317,12 @@
   <div class="mo-lightbox-overlay" data-mo-close></div>
   <div class="mo-lightbox-content">
     <button type="button" class="mo-lightbox-close" data-mo-close aria-label="Cerrar">&times;</button>
-    <div class="mo-lightbox-imgwrap" id="moLightboxImgWrap">
-      <img id="moLightboxImg" src="" alt="" />
-      <span class="mo-lightbox-zoomhint">Clic para ampliar</span>
+    <div class="mo-lightbox-imgwrap">
+      <div class="mo-lightbox-mainimg" id="moLightboxImgWrap">
+        <img id="moLightboxImg" src="" alt="" />
+        <span class="mo-lightbox-zoomhint">Clic para ampliar</span>
+      </div>
+      <div class="mo-lightbox-thumbs" id="moLightboxThumbs"></div>
     </div>
     <div class="mo-lightbox-info">
       <span class="mo-card-brand" id="moLightboxBrand" style="position:static;"></span>
@@ -1275,12 +1369,41 @@
     var lightbox = document.getElementById('moLightbox');
     var imgWrap = document.getElementById('moLightboxImgWrap');
     var img = document.getElementById('moLightboxImg');
+    var thumbs = document.getElementById('moLightboxThumbs');
+
+    function setMainImage(src, alt) {
+      img.src = src;
+      img.alt = alt;
+      imgWrap.classList.remove('zoomed');
+      img.style.transformOrigin = 'center center';
+      thumbs.querySelectorAll('button').forEach(function (b) {
+        b.classList.toggle('active', b.getAttribute('data-src') === src);
+      });
+    }
 
     function openLightbox(card) {
       var srcImg = card.querySelector('.mo-card-img img');
       if (!srcImg) return;
-      img.src = srcImg.src;
-      img.alt = srcImg.alt;
+      var alt = srcImg.alt;
+      var gallery = [];
+      try { gallery = JSON.parse(card.getAttribute('data-gallery') || '[]'); } catch (e) {}
+      var base = srcImg.src.slice(0, srcImg.src.lastIndexOf('/') + 1);
+      thumbs.innerHTML = '';
+      if (gallery.length > 1) {
+        gallery.forEach(function (fname, i) {
+          var full = base + fname;
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.setAttribute('data-src', full);
+          btn.innerHTML = '<img src="' + full + '" alt="Vista ' + (i + 1) + '" loading="lazy" />';
+          btn.addEventListener('click', function () { setMainImage(full, alt); });
+          thumbs.appendChild(btn);
+        });
+        thumbs.style.display = '';
+      } else {
+        thumbs.style.display = 'none';
+      }
+      setMainImage(srcImg.src, alt);
       document.getElementById('moLightboxBrand').textContent = card.querySelector('.mo-card-brand').textContent;
       document.getElementById('moLightboxGender').textContent = card.querySelector('.mo-card-gender').textContent;
       document.getElementById('moLightboxLine').textContent = card.querySelector('.mo-card-line').textContent;
@@ -1289,8 +1412,6 @@
       document.getElementById('moLightboxSize').textContent = card.querySelector('.mo-card-size').textContent;
       document.getElementById('moLightboxPrice').innerHTML = card.querySelector('.mo-card-price').innerHTML;
       document.getElementById('moLightboxCta').href = card.querySelector('.mo-card-cta').href;
-      imgWrap.classList.remove('zoomed');
-      img.style.transformOrigin = 'center center';
       lightbox.classList.add('open');
       lightbox.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
