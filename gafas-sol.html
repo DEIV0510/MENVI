@@ -266,17 +266,60 @@
     background: #fafafa;
     position: relative;
     overflow: hidden;
-    cursor: zoom-in;
+    display: flex;
+    flex-direction: column;
     min-height: 320px;
   }
-  .gs-lightbox-imgwrap img {
+  .gs-lightbox-mainimg {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+  }
+  .gs-lightbox-mainimg img {
     width: 100%; height: 100%;
     object-fit: contain;
     transition: transform .25s ease;
     transform-origin: center center;
   }
-  .gs-lightbox-imgwrap.zoomed { cursor: zoom-out; }
-  .gs-lightbox-imgwrap.zoomed img { transform: scale(2.2); }
+  .gs-lightbox-mainimg.zoomed { cursor: zoom-out; }
+  .gs-lightbox-mainimg.zoomed img { transform: scale(2.2); }
+  .gs-lightbox-thumbs {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    overflow-x: auto;
+  }
+  .gs-lightbox-thumbs button {
+    flex: 0 0 auto;
+    width: 56px; height: 56px;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #fafafa;
+  }
+  .gs-lightbox-thumbs button.active { border-color: #111; }
+  .gs-lightbox-thumbs img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+  }
+  .gs-card-angles {
+    position: absolute;
+    bottom: 14px; right: 14px;
+    padding: 4px 10px;
+    background: rgba(17,17,17,.75);
+    border-radius: 999px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #fff;
+  }
   .gs-lightbox-info {
     flex: 1 1 42%;
     padding: 40px 36px;
@@ -356,10 +399,11 @@
 <div class="gs-grid" id="gsGrid">
 
   <!-- 1 -->
-  <div class="gs-card" data-brand="nike">
+  <div class="gs-card" data-brand="nike" data-gallery='["gafas-nike-field.jpg","gafas-nike-field-2.jpg","gafas-nike-field-3.jpg"]'>
     <div class="gs-card-img">
       <span class="gs-card-brand">Nike</span>
       <img src="imgs2/gafas-nike-field.jpg" alt="Nike Field, gafas deportivas gris con lente espejado" loading="lazy" />
+      <span class="gs-card-angles">3 fotos</span>
     </div>
     <div class="gs-card-body">
       <div class="gs-card-line">Nike Field</div>
@@ -371,10 +415,11 @@
   </div>
 
   <!-- 2 -->
-  <div class="gs-card" data-brand="nike">
+  <div class="gs-card" data-brand="nike" data-gallery='["gafas-nike-road-durazno.jpg","gafas-nike-road-durazno-2.jpg"]'>
     <div class="gs-card-img">
       <span class="gs-card-brand">Nike</span>
       <img src="imgs2/gafas-nike-road-durazno.jpg" alt="Nike Road, gafas deportivas durazno con lente morado" loading="lazy" />
+      <span class="gs-card-angles">2 fotos</span>
     </div>
     <div class="gs-card-body">
       <div class="gs-card-line">Nike Road</div>
@@ -386,10 +431,11 @@
   </div>
 
   <!-- 3 -->
-  <div class="gs-card" data-brand="nike">
+  <div class="gs-card" data-brand="nike" data-gallery='["gafas-nike-road-naranja.jpg","gafas-nike-road-naranja-2.jpg"]'>
     <div class="gs-card-img">
       <span class="gs-card-brand">Nike</span>
       <img src="imgs2/gafas-nike-road-naranja.jpg" alt="Nike Road, gafas deportivas naranja con lente morado" loading="lazy" />
+      <span class="gs-card-angles">2 fotos</span>
     </div>
     <div class="gs-card-body">
       <div class="gs-card-line">Nike Road</div>
@@ -401,10 +447,11 @@
   </div>
 
   <!-- 4 -->
-  <div class="gs-card" data-brand="nike">
+  <div class="gs-card" data-brand="nike" data-gallery='["gafas-nike-max.jpg","gafas-nike-max-2.jpg","gafas-nike-max-3.jpg"]'>
     <div class="gs-card-img">
       <span class="gs-card-brand">Nike</span>
       <img src="imgs2/gafas-nike-max.jpg" alt="Nike Max, gafas negras estilo aviador" loading="lazy" />
+      <span class="gs-card-angles">3 fotos</span>
     </div>
     <div class="gs-card-body">
       <div class="gs-card-line">Nike Max</div>
@@ -416,10 +463,11 @@
   </div>
 
   <!-- 5 -->
-  <div class="gs-card" data-brand="nike">
+  <div class="gs-card" data-brand="nike" data-gallery='["gafas-nike-sport-negro.jpg","gafas-nike-sport-negro-2.jpg","gafas-nike-sport-negro-3.jpg"]'>
     <div class="gs-card-img">
       <span class="gs-card-brand">Nike</span>
       <img src="imgs2/gafas-nike-sport-negro.jpg" alt="Nike, gafas deportivas negras con lente verde oscuro" loading="lazy" />
+      <span class="gs-card-angles">3 fotos</span>
     </div>
     <div class="gs-card-body">
       <div class="gs-card-line">Nike Sport</div>
@@ -431,10 +479,11 @@
   </div>
 
   <!-- 6 -->
-  <div class="gs-card" data-brand="nike">
+  <div class="gs-card" data-brand="nike" data-gallery='["gafas-nike-acg-caqui.jpg","gafas-nike-acg-caqui-2.jpg","gafas-nike-acg-caqui-3.jpg"]'>
     <div class="gs-card-img">
       <span class="gs-card-brand">Nike ACG</span>
       <img src="imgs2/gafas-nike-acg-caqui.jpg" alt="Nike ACG, gafas caqui All Conditions Gear" loading="lazy" />
+      <span class="gs-card-angles">3 fotos</span>
     </div>
     <div class="gs-card-body">
       <div class="gs-card-line">Nike ACG · All Conditions Gear</div>
@@ -446,10 +495,11 @@
   </div>
 
   <!-- 7 -->
-  <div class="gs-card" data-brand="nike">
+  <div class="gs-card" data-brand="nike" data-gallery='["gafas-nike-maxoptics-pro.jpg","gafas-nike-maxoptics-pro-2.jpg","gafas-nike-maxoptics-pro-3.jpg"]'>
     <div class="gs-card-img">
       <span class="gs-card-brand">Nike</span>
       <img src="imgs2/gafas-nike-maxoptics-pro.jpg" alt="Nike Max Optics Pro, gafas negras con lente verde-azul" loading="lazy" />
+      <span class="gs-card-angles">3 fotos</span>
     </div>
     <div class="gs-card-body">
       <div class="gs-card-line">Nike Max Optics Pro</div>
@@ -476,10 +526,11 @@
   </div>
 
   <!-- 9 -->
-  <div class="gs-card" data-brand="adidas">
+  <div class="gs-card" data-brand="adidas" data-gallery='["gafas-adidas-negro-champan.jpg","gafas-adidas-negro-champan-2.jpg","gafas-adidas-negro-champan-3.jpg"]'>
     <div class="gs-card-img">
       <span class="gs-card-brand">Adidas</span>
       <img src="imgs2/gafas-adidas-negro-champan.jpg" alt="Adidas, gafas negras con lente champán" loading="lazy" />
+      <span class="gs-card-angles">3 fotos</span>
     </div>
     <div class="gs-card-body">
       <div class="gs-card-line">Adidas Sport</div>
@@ -491,10 +542,11 @@
   </div>
 
   <!-- 10 -->
-  <div class="gs-card" data-brand="adidas">
+  <div class="gs-card" data-brand="adidas" data-gallery='["gafas-adidas-negro-rojo.jpg","gafas-adidas-negro-rojo-2.jpg","gafas-adidas-negro-rojo-3.jpg"]'>
     <div class="gs-card-img">
       <span class="gs-card-brand">Adidas</span>
       <img src="imgs2/gafas-adidas-negro-rojo.jpg" alt="Adidas, gafas negras con lente espejado rojo" loading="lazy" />
+      <span class="gs-card-angles">3 fotos</span>
     </div>
     <div class="gs-card-body">
       <div class="gs-card-line">Adidas Sport</div>
@@ -506,10 +558,11 @@
   </div>
 
   <!-- 11 -->
-  <div class="gs-card" data-brand="adidas">
+  <div class="gs-card" data-brand="adidas" data-gallery='["gafas-adidas-cafe-iridiscente.jpg","gafas-adidas-cafe-iridiscente-2.jpg","gafas-adidas-cafe-iridiscente-3.jpg"]'>
     <div class="gs-card-img">
       <span class="gs-card-brand">Adidas</span>
       <img src="imgs2/gafas-adidas-cafe-iridiscente.jpg" alt="Adidas, gafas cafe iridiscente con lente dorado" loading="lazy" />
+      <span class="gs-card-angles">3 fotos</span>
     </div>
     <div class="gs-card-body">
       <div class="gs-card-line">Adidas Sport</div>
@@ -521,10 +574,11 @@
   </div>
 
   <!-- 12 -->
-  <div class="gs-card" data-brand="adidas">
+  <div class="gs-card" data-brand="adidas" data-gallery='["gafas-adidas-transparente-gris.jpg","gafas-adidas-transparente-gris-2.jpg","gafas-adidas-transparente-gris-3.jpg"]'>
     <div class="gs-card-img">
       <span class="gs-card-brand">Adidas Originals</span>
       <img src="imgs2/gafas-adidas-transparente-gris.jpg" alt="Adidas Originals, gafas transparentes con lente morado" loading="lazy" />
+      <span class="gs-card-angles">3 fotos</span>
     </div>
     <div class="gs-card-body">
       <div class="gs-card-line">Adidas Originals</div>
@@ -566,10 +620,11 @@
   </div>
 
   <!-- 15 -->
-  <div class="gs-card" data-brand="adidas">
+  <div class="gs-card" data-brand="adidas" data-gallery='["gafas-adidas-negro-catseye.jpg","gafas-adidas-negro-catseye-2.jpg"]'>
     <div class="gs-card-img">
       <span class="gs-card-brand">Adidas Originals</span>
       <img src="imgs2/gafas-adidas-negro-catseye.jpg" alt="Adidas Originals, gafas negras estilo cat-eye" loading="lazy" />
+      <span class="gs-card-angles">2 fotos</span>
     </div>
     <div class="gs-card-body">
       <div class="gs-card-line">Adidas Originals</div>
@@ -581,10 +636,11 @@
   </div>
 
   <!-- 16 -->
-  <div class="gs-card" data-brand="monastery">
+  <div class="gs-card" data-brand="monastery" data-gallery='["gafas-monastery-plata.jpg","gafas-monastery-plata-2.jpg","gafas-monastery-plata-3.jpg"]'>
     <div class="gs-card-img">
       <span class="gs-card-brand">Monastery</span>
       <img src="imgs2/gafas-monastery-plata.jpg" alt="Monastery, gafas sin marco con detalles en plata" loading="lazy" />
+      <span class="gs-card-angles">3 fotos</span>
     </div>
     <div class="gs-card-body">
       <div class="gs-card-line">Monastery</div>
@@ -665,9 +721,12 @@
   <div class="gs-lightbox-overlay" data-gs-close></div>
   <div class="gs-lightbox-content">
     <button type="button" class="gs-lightbox-close" data-gs-close aria-label="Cerrar">&times;</button>
-    <div class="gs-lightbox-imgwrap" id="gsLightboxImgWrap">
-      <img id="gsLightboxImg" src="" alt="" />
-      <span class="gs-lightbox-zoomhint">Clic para ampliar</span>
+    <div class="gs-lightbox-imgwrap">
+      <div class="gs-lightbox-mainimg" id="gsLightboxImgWrap">
+        <img id="gsLightboxImg" src="" alt="" />
+        <span class="gs-lightbox-zoomhint">Clic para ampliar</span>
+      </div>
+      <div class="gs-lightbox-thumbs" id="gsLightboxThumbs"></div>
     </div>
     <div class="gs-lightbox-info">
       <span class="gs-card-brand" id="gsLightboxBrand"></span>
@@ -717,20 +776,47 @@
     var lightbox = document.getElementById('gsLightbox');
     var imgWrap = document.getElementById('gsLightboxImgWrap');
     var img = document.getElementById('gsLightboxImg');
+    var thumbs = document.getElementById('gsLightboxThumbs');
+
+    function setMainImage(src, alt) {
+      img.src = src;
+      img.alt = alt;
+      imgWrap.classList.remove('zoomed');
+      img.style.transformOrigin = 'center center';
+      thumbs.querySelectorAll('button').forEach(function (b) {
+        b.classList.toggle('active', b.getAttribute('data-src') === src);
+      });
+    }
 
     function openLightbox(card) {
       var srcImg = card.querySelector('.gs-card-img img');
       if (!srcImg) return;
-      img.src = srcImg.src;
-      img.alt = srcImg.alt;
+      var alt = srcImg.alt;
+      var gallery = [];
+      try { gallery = JSON.parse(card.getAttribute('data-gallery') || '[]'); } catch (e) {}
+      var base = srcImg.src.slice(0, srcImg.src.lastIndexOf('/') + 1);
+      thumbs.innerHTML = '';
+      if (gallery.length > 1) {
+        gallery.forEach(function (fname, i) {
+          var full = base + fname;
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.setAttribute('data-src', full);
+          btn.innerHTML = '<img src="' + full + '" alt="Vista ' + (i + 1) + '" loading="lazy" />';
+          btn.addEventListener('click', function () { setMainImage(full, alt); });
+          thumbs.appendChild(btn);
+        });
+        thumbs.style.display = '';
+      } else {
+        thumbs.style.display = 'none';
+      }
+      setMainImage(srcImg.src, alt);
       document.getElementById('gsLightboxBrand').textContent = card.querySelector('.gs-card-brand').textContent;
       document.getElementById('gsLightboxLine').textContent = card.querySelector('.gs-card-line').textContent;
       document.getElementById('gsLightboxTitle').textContent = card.querySelector('.gs-card-title').textContent;
       document.getElementById('gsLightboxText').textContent = card.querySelector('.gs-card-text').textContent;
       document.getElementById('gsLightboxPrice').innerHTML = card.querySelector('.gs-card-price').innerHTML;
       document.getElementById('gsLightboxCta').href = card.querySelector('.gs-card-cta').href;
-      imgWrap.classList.remove('zoomed');
-      img.style.transformOrigin = 'center center';
       lightbox.classList.add('open');
       lightbox.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
